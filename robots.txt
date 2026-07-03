@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://venkataprasadm.github.io/profile/sitemap.xml
