@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const siteUrl = "https://venkataprasadm.github.io/profile";
+const siteUrl = "https://venkataprasadm.com";
 const author = "Venkata Prasad Muraharisetty";
 const email = "venkataprasadm@outlook.com";
 const resumePdf = "assets/resume/Venkat_Prasad_Senior_Product_Owner_Resume.pdf";
