@@ -25,7 +25,7 @@ const nav = [
   ["Products", "/#products"],
   ["Skills", "/#skills"],
   ["Blog", "/blog/"],
-  ["Jira Resume", "/jira-resume/"],
+  ["Jira Resume", "/jira-resume/index.html"],
   ["Resume", `/${resumePdf}`],
   ["Contact", "/#contact"],
 ];
@@ -770,7 +770,7 @@ function homePage() {
       <p class="hero-lede">I turn regulated financial workflows, enterprise architecture, and advisor productivity pain into AI-powered product capabilities that teams can ship, measure, and trust.</p>
       <div class="hero-actions">
         <a class="button primary" href="#ai-impact">See AI impact</a>
-        <a class="button secondary" href="jira-resume/">Switch to Jira Resume</a>
+        <a class="button secondary" href="jira-resume/index.html">Switch to Jira Resume</a>
         <a class="button secondary" href="${resumePdf}">View resume</a>
       </div>
       <dl class="hero-stats" aria-label="Profile highlights">
