@@ -287,7 +287,7 @@ function pageShell({ file = "index.html", title, description, body, canonical, t
       <h2>Want to play a planning game with Venkat?</h2>
       <p>Match product lifecycle artifacts to the right stage and unlock the Product Strategist badge.</p>
       <div class="hero-actions">
-        <a class="button primary" href="${prefix}index.html#planning-game" data-mission-start>Start game</a>
+        <button class="button primary" type="button" data-mission-start data-home-url="${prefix}index.html#planning-game">Start game</button>
         <button class="button secondary" type="button" data-mission-close>Maybe later</button>
       </div>
     </div>
@@ -1020,7 +1020,7 @@ function hideLoader(){loader?.classList.add("is-hidden");sessionStorage.setItem(
 if(loader&&sessionStorage.getItem("jarvis_intro_seen")){loader.hidden=true}else if(loader){const lines=["Epic created","Stories created","Sprint planning aligned","Acceptance criteria locked","Deployed to production"];let step=0;const tick=()=>{if(step<lines.length){if(loaderLine)loaderLine.textContent=lines[step]+"...";if(loaderBar)loaderBar.style.width=((step+1)/lines.length*100)+"%";loaderStages.forEach((item,index)=>{item.classList.toggle("is-active",index===step);item.classList.toggle("is-done",index<step)});step+=1;setTimeout(tick,520)}else{if(loaderLine)loaderLine.textContent="100% complete. Portfolio deployed.";loaderStages.forEach((item)=>item.classList.add("is-done"));setTimeout(hideLoader,650)}};setTimeout(tick,350)}
 document.querySelector("[data-loader-skip]")?.addEventListener("click",hideLoader);
 document.querySelector("[data-mission-close]")?.addEventListener("click",()=>{sessionStorage.setItem("mission_popup_seen","1");if(missionPopup)missionPopup.hidden=true});
-document.querySelector("[data-mission-start]")?.addEventListener("click",()=>{sessionStorage.setItem("mission_popup_seen","1");if(missionPopup)missionPopup.hidden=true});
+document.querySelector("[data-mission-start]")?.addEventListener("click",(event)=>{sessionStorage.setItem("mission_popup_seen","1");if(missionPopup)missionPopup.hidden=true;const game=document.querySelector("#planning-game");if(game){game.scrollIntoView({behavior:"smooth",block:"start"});if(location.protocol!=="file:")history.replaceState(null,"","#planning-game");return}const url=event.currentTarget?.dataset.homeUrl;if(url)location.assign(url)});
 const toast=document.createElement("div");
 toast.className="achievement-toast";
 toast.setAttribute("role","status");
