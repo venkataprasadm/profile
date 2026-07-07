@@ -25,6 +25,7 @@ const nav = [
   ["Products", "/#products"],
   ["Skills", "/#skills"],
   ["Blog", "/blog/"],
+  ["Jira Resume", "/jira-resume/"],
   ["Resume", `/${resumePdf}`],
   ["Contact", "/#contact"],
 ];
@@ -687,9 +688,9 @@ function css() {
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
 .ai-console{padding:1.25rem;border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.12),rgba(139,92,246,.08)),var(--surface);box-shadow:var(--shadow)}.console-topline{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}.console-topline span{color:var(--brand);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.12em}.console-topline strong{font-size:1.15rem}.ai-console p{min-height:5.5rem;color:var(--muted);font-size:1.05rem}.console-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin:1rem 0}.console-metrics span{padding:.8rem;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.045);color:var(--muted);font-size:.83rem}.console-metrics strong{display:block;color:var(--text);font-size:1.1rem}.console-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}.console-actions button{min-height:42px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--muted);font-weight:800}.console-actions button:hover,.console-actions button:focus-visible,.console-actions button.is-active{background:var(--brand);color:#07111f}.impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.hero{position:relative;overflow:hidden}.hero>*:not(.neural-canvas){position:relative;z-index:1}.neural-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.58;filter:saturate(1.3);pointer-events:none}.quest-section{padding-top:0}.quest-board{display:grid;grid-template-columns:minmax(0,1.25fr) 280px;gap:1rem;align-items:stretch}.quest-stage,.quest-score{border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.08),rgba(255,255,255,.03)),var(--surface);box-shadow:var(--shadow);padding:1.25rem}.quest-stage h3{font-size:clamp(1.4rem,3vw,2.25rem);margin:.2rem 0 .75rem}.quest-stage p:not(.meta),.quest-score p{color:var(--muted)}.quest-options{display:grid;gap:.7rem;margin-top:1rem}.quest-options button{min-height:48px;text-align:left;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);font-weight:800;padding:.85rem 1rem}.quest-options button:hover,.quest-options button:focus-visible{border-color:var(--brand);transform:translateY(-1px)}.quest-score{display:grid;align-content:center;text-align:center}.quest-score span{color:var(--brand);font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.12em}.quest-score strong{font-size:4rem;line-height:1;margin:.5rem 0}.achievement-toast{position:fixed;right:1rem;bottom:1rem;z-index:30;max-width:330px;padding:1rem;border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg,rgba(79,209,197,.94),rgba(139,92,246,.94));color:#07111f;box-shadow:var(--shadow);transform:translateY(130%);transition:transform .4s ease}.achievement-toast.is-visible{transform:translateY(0)}.achievement-toast strong{display:block}.achievement-toast span{font-weight:800}.cyber-mode{--bg:#04070d;--surface:#07111f;--surface-2:#0c1f33;--brand:#00f5ff;--brand-2:#ff3df2;--accent:#faff00}.cyber-mode body{background:linear-gradient(180deg,#04070d,#10122a)}
 .game-hud{position:fixed;right:1rem;top:82px;z-index:25;width:min(330px,calc(100vw - 2rem))}.hud-main{display:grid;grid-template-columns:auto 1fr auto;gap:.65rem;align-items:center;width:100%;min-height:46px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--surface) 90%,transparent);color:var(--text);padding:.55rem .75rem;box-shadow:var(--shadow);backdrop-filter:blur(14px)}.hud-level{font-weight:900;color:var(--brand);font-size:.82rem}.hud-xp{height:8px;border-radius:999px;background:var(--surface-2);overflow:hidden}.hud-xp span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--accent));transition:width .35s ease}.hud-main [data-xp-text]{font-size:.78rem;color:var(--muted);font-weight:800}.hud-drawer{display:none;margin-top:.5rem;border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:1rem;box-shadow:var(--shadow)}.game-hud.is-open .hud-drawer{display:block}.focus-switch{display:flex;align-items:center;gap:.5rem;margin:.75rem 0;color:var(--muted)}.hud-hint{margin:0;color:var(--muted);font-size:.86rem}.terminal-cursor{border:0;background:transparent;color:var(--brand);font-weight:900;font-size:1.1rem}.terminal-modal{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:rgba(0,0,0,.58);padding:1rem}.terminal-modal[hidden]{display:none}.terminal-panel{width:min(720px,100%);border:1px solid var(--brand);border-radius:8px;background:#050b14;color:#d7f9ff;box-shadow:var(--shadow);padding:1rem}.terminal-head{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:.75rem;margin-bottom:.75rem}.terminal-head button{border:1px solid var(--line);border-radius:8px;background:transparent;color:#d7f9ff;padding:.35rem .65rem}.terminal-panel pre{min-height:240px;max-height:50vh;margin:0 0 .75rem;white-space:pre-wrap}.terminal-panel input{width:100%;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:#08111f;color:#d7f9ff;padding:.75rem}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.recruiter-mode .neural-canvas,.recruiter-mode .achievement-toast{display:none}.recruiter-mode .reveal{opacity:1;transform:none}.recruiter-mode .hero{min-height:auto}.konami-mode{filter:contrast(1.15) saturate(1.45)}.konami-mode:before{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.08),rgba(255,255,255,.08) 1px,transparent 1px,transparent 4px);mix-blend-mode:overlay}
-.jarvis-loader{position:fixed;inset:0;z-index:80;display:grid;place-items:center;text-align:center;padding:2rem;background:radial-gradient(circle at 50% 35%,rgba(79,209,197,.2),transparent 24%),#050b14;color:var(--text);transition:opacity .45s ease,visibility .45s ease}.jarvis-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}.jarvis-loader h1{font-size:clamp(2.4rem,7vw,5.5rem);line-height:.95;margin:.4rem 0}.jarvis-loader>p:not(.eyebrow){color:var(--muted);font-size:1.1rem}.jarvis-core{position:relative;width:170px;height:170px;display:grid;place-items:center}.jarvis-core span{position:absolute;inset:0;border:1px solid rgba(79,209,197,.55);border-radius:50%;animation:jarvis-spin 4s linear infinite}.jarvis-core span:nth-child(2){inset:24px;border-color:rgba(139,92,246,.62);animation-duration:2.8s;animation-direction:reverse}.jarvis-core span:nth-child(3){inset:52px;border-color:rgba(247,201,72,.7);animation-duration:1.8s}.loader-track{width:min(520px,90vw);height:10px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface);margin:1rem auto}.loader-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--accent),var(--brand-2));transition:width .25s ease}.loader-stages{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.35rem;color:var(--muted)}.loader-stages li.is-active{color:var(--brand);font-weight:900}.loader-stages li.is-done{color:var(--accent)}@keyframes jarvis-spin{to{transform:rotate(360deg)}}.mission-popup,.chat-panel{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(0,0,0,.58);padding:1rem}.mission-popup[hidden],.chat-panel[hidden]{display:none}.mission-card,.chat-card{width:min(620px,100%);border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.12),rgba(139,92,246,.08)),var(--surface);box-shadow:var(--shadow);padding:1.25rem}.mission-card h2{margin-top:.2rem}.jarvis-agent{position:fixed;right:1rem;bottom:1rem;z-index:24;display:flex;align-items:center;gap:.55rem;border:1px solid var(--line);border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#07111f;padding:.55rem .8rem;font-weight:900;box-shadow:var(--shadow)}.jarvis-agent span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.75)}.chat-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;border-bottom:1px solid var(--line);padding-bottom:.75rem;margin-bottom:.75rem}.chat-head button,.chat-prompts button,.chat-card form button{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);padding:.55rem .75rem;font-weight:800}.chat-log{display:grid;gap:.65rem;max-height:330px;overflow:auto;color:var(--muted);margin-bottom:.75rem}.chat-log p{margin:0;padding:.7rem;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.04)}.chat-prompts{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}.chat-card form{display:grid;grid-template-columns:1fr auto;gap:.5rem}.chat-card input{width:100%;border:1px solid var(--line);border-radius:8px;background:#08111f;color:var(--text);padding:.75rem}.planning-game{padding-top:0}.match-game{display:grid;grid-template-columns:1fr 1fr 280px;gap:1rem}.match-column,.match-status{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:1.25rem;box-shadow:var(--shadow)}.match-column{display:grid;gap:.65rem;align-content:start}.match-column h3{margin:0 0 .4rem}.match-column button{min-height:46px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);font-weight:800}.match-column button.is-selected{border-color:var(--accent);box-shadow:0 0 0 2px rgba(34,228,172,.18)}.match-column button.is-matched{background:rgba(34,228,172,.16);border-color:var(--accent);color:var(--accent)}.match-column button.is-wrong{background:rgba(255,84,112,.14);border-color:#ff5470}.match-status{text-align:center;display:grid;align-content:center}.match-status span{color:var(--brand);font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.12em}.match-status strong{font-size:3rem}.match-status p{color:var(--muted)}
-@media (max-width:900px){.nav-toggle{display:flex}.site-nav{position:absolute;left:1rem;right:1rem;top:68px;display:none;flex-direction:column;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.5rem}.site-nav.is-open{display:flex}.hero,.split,.tech-radar,.resume-layout,.quest-board,.match-game{grid-template-columns:1fr}.hero{min-height:auto;padding-top:4rem}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{grid-template-columns:1fr 1fr}.section-heading{display:block}.contact-band,.site-footer{display:block}.footer-links{margin-top:1rem}.game-hud{top:auto;bottom:4.8rem}.jarvis-agent strong{display:none}}
-@media (max-width:620px){.brand small{display:none}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid,.console-metrics,.console-actions{grid-template-columns:1fr}.hero h1,.page-hero h1{font-size:2.65rem}.section,.hero,.page-hero,.article,.case-study{padding-left:1rem;padding-right:1rem}.site-header{padding:.7rem 1rem}.orbit-grid{grid-template-columns:1fr}.cover-large{min-height:180px}.ai-console p{min-height:auto}}
+.jarvis-loader{position:fixed;inset:0;z-index:80;display:grid;place-items:center;text-align:center;padding:2rem;background:radial-gradient(circle at 50% 35%,rgba(79,209,197,.2),transparent 24%),#050b14;color:var(--text);transition:opacity .45s ease,visibility .45s ease}.jarvis-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}.jarvis-loader h1{font-size:clamp(2.4rem,7vw,5.5rem);line-height:.95;margin:.4rem 0}.jarvis-loader>p:not(.eyebrow){color:var(--muted);font-size:1.1rem}.jarvis-core{position:relative;width:170px;height:170px;display:grid;place-items:center}.jarvis-core span{position:absolute;inset:0;border:1px solid rgba(79,209,197,.55);border-radius:50%;animation:jarvis-spin 4s linear infinite}.jarvis-core span:nth-child(2){inset:24px;border-color:rgba(139,92,246,.62);animation-duration:2.8s;animation-direction:reverse}.jarvis-core span:nth-child(3){inset:52px;border-color:rgba(247,201,72,.7);animation-duration:1.8s}.loader-track{width:min(520px,90vw);height:10px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface);margin:1rem auto}.loader-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--accent),var(--brand-2));transition:width .25s ease}.loader-stages{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.35rem;color:var(--muted)}.loader-stages li.is-active{color:var(--brand);font-weight:900}.loader-stages li.is-done{color:var(--accent)}@keyframes jarvis-spin{to{transform:rotate(360deg)}}.mission-popup,.chat-panel{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(0,0,0,.58);padding:1rem}.mission-popup[hidden],.chat-panel[hidden]{display:none}.mission-card,.chat-card{width:min(620px,100%);border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.12),rgba(139,92,246,.08)),var(--surface);box-shadow:var(--shadow);padding:1.25rem}.mission-card h2{margin-top:.2rem}.jarvis-agent{position:fixed;right:1rem;bottom:1rem;z-index:24;display:flex;align-items:center;gap:.55rem;border:1px solid var(--line);border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#07111f;padding:.55rem .8rem;font-weight:900;box-shadow:var(--shadow)}.jarvis-agent span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.75)}.chat-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;border-bottom:1px solid var(--line);padding-bottom:.75rem;margin-bottom:.75rem}.chat-head button,.chat-prompts button,.chat-card form button{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);padding:.55rem .75rem;font-weight:800}.chat-log{display:grid;gap:.65rem;max-height:330px;overflow:auto;color:var(--muted);margin-bottom:.75rem}.chat-log p{margin:0;padding:.7rem;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.04)}.chat-prompts{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}.chat-card form{display:grid;grid-template-columns:1fr auto;gap:.5rem}.chat-card input{width:100%;border:1px solid var(--line);border-radius:8px;background:#08111f;color:var(--text);padding:.75rem}.planning-game{padding-top:0}.match-game{display:grid;grid-template-columns:1fr 1fr 280px;gap:1rem}.match-column,.match-status{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:1.25rem;box-shadow:var(--shadow)}.match-column{display:grid;gap:.65rem;align-content:start}.match-column h3{margin:0 0 .4rem}.match-column button{min-height:46px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);font-weight:800}.match-column button.is-selected{border-color:var(--accent);box-shadow:0 0 0 2px rgba(34,228,172,.18)}.match-column button.is-matched{background:rgba(34,228,172,.16);border-color:var(--accent);color:var(--accent)}.match-column button.is-wrong{background:rgba(255,84,112,.14);border-color:#ff5470}.match-status{text-align:center;display:grid;align-content:center}.match-status span{color:var(--brand);font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.12em}.match-status strong{font-size:3rem}.match-status p{color:var(--muted)}.jira-hero{background:radial-gradient(circle at 18% 25%,rgba(0,82,204,.22),transparent 30%),radial-gradient(circle at 88% 10%,rgba(34,228,172,.16),transparent 28%)}.jira-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1rem}.jira-summary div,.jira-controls,.jira-column,.jira-card,.retro-grid .content-card{border:1px solid var(--line);border-radius:8px;background:var(--surface);box-shadow:var(--shadow)}.jira-summary div{padding:1rem}.jira-summary span{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;font-weight:900;letter-spacing:.1em}.jira-summary strong{display:block;margin-top:.25rem;font-size:1.05rem}.jira-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem}.jira-filter-group{display:flex;gap:.5rem;flex-wrap:wrap}.jira-filter-group button{border:1px solid var(--line);border-radius:999px;background:var(--surface-2);color:var(--muted);padding:.55rem .85rem;font-weight:900}.jira-filter-group button.is-active,.jira-filter-group button:hover,.jira-filter-group button:focus-visible{background:var(--brand);color:#07111f}.jira-search input{width:min(360px,70vw);border:1px solid var(--line);border-radius:8px;background:#08111f;color:var(--text);padding:.75rem}.jira-board-section{padding-top:0}.jira-board{display:grid;grid-template-columns:repeat(4,minmax(250px,1fr));gap:1rem;align-items:start;overflow-x:auto;padding-bottom:.5rem}.jira-column{min-width:250px;padding:.85rem;background:color-mix(in srgb,var(--surface) 88%,#0052cc 12%)}.jira-column-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}.jira-column-head h2{font-size:1rem;margin:0}.jira-column-head span{display:grid;place-items:center;width:28px;height:28px;border-radius:999px;background:var(--surface-2);color:var(--brand);font-weight:900}.jira-card{padding:1rem;margin-bottom:.85rem;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02)),var(--surface-2);transition:transform .2s ease,border-color .2s ease,opacity .2s ease}.jira-card:hover{transform:translateY(-3px);border-color:var(--brand)}.jira-card[hidden]{display:none}.jira-card-top{display:flex;justify-content:space-between;gap:.75rem;margin-bottom:.65rem}.jira-key{color:#7dd3fc;font-weight:900}.jira-type{border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.72rem;padding:.2rem .5rem;text-transform:uppercase;font-weight:900}.jira-card h3{font-size:1rem;margin:.25rem 0}.jira-card p,.jira-card li{color:var(--muted);font-size:.92rem}.jira-meta{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin:.85rem 0}.jira-meta div{border:1px solid var(--line);border-radius:8px;padding:.55rem}.jira-meta dt{color:var(--muted);font-size:.72rem;text-transform:uppercase;font-weight:900}.jira-meta dd{margin:0;color:var(--text);font-weight:900}.jira-card details{border-top:1px solid var(--line);padding-top:.65rem}.jira-card summary{cursor:pointer;font-weight:900}.retro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.jira-empty{padding:1rem;border:1px dashed var(--line);border-radius:8px;color:var(--muted);text-align:center}
+@media (max-width:900px){.nav-toggle{display:flex}.site-nav{position:absolute;left:1rem;right:1rem;top:68px;display:none;flex-direction:column;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.5rem}.site-nav.is-open{display:flex}.hero,.split,.tech-radar,.resume-layout,.quest-board,.match-game,.jira-summary,.retro-grid{grid-template-columns:1fr}.jira-controls{display:grid}.hero{min-height:auto;padding-top:4rem}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{grid-template-columns:1fr 1fr}.section-heading{display:block}.contact-band,.site-footer{display:block}.footer-links{margin-top:1rem}.game-hud{top:auto;bottom:4.8rem}.jarvis-agent strong{display:none}}
+@media (max-width:620px){.brand small{display:none}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid,.console-metrics,.console-actions{grid-template-columns:1fr}.hero h1,.page-hero h1{font-size:2.65rem}.section,.hero,.page-hero,.article,.case-study{padding-left:1rem;padding-right:1rem}.site-header{padding:.7rem 1rem}.orbit-grid{grid-template-columns:1fr}.cover-large{min-height:180px}.ai-console p{min-height:auto}.jira-board{grid-template-columns:repeat(4,82vw)}.jira-search input{width:100%}}
 @media print{.site-header,.site-footer,.theme-toggle,.nav-toggle,.hero-actions{display:none}.page-hero,.section{padding:1rem 0}body{background:#fff;color:#111}.resume-sidebar,.resume-main,.content-card{box-shadow:none}}
 `;
 }
@@ -713,7 +714,7 @@ function svg(name, initials, c1, c2) {
 }
 
 function sitemap() {
-  const urls = ["", "blog/", "resume/", ...products.map((p) => `projects/${p.slug}/`), ...posts.map((p) => `blog/${p.slug}/`)];
+  const urls = ["", "blog/", "resume/", "jira-resume/", ...products.map((p) => `projects/${p.slug}/`), ...posts.map((p) => `blog/${p.slug}/`)];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${absolute(u)}</loc><lastmod>2026-07-03</lastmod><changefreq>${u.includes("blog/") ? "monthly" : "weekly"}</changefreq></url>`).join("\n")}
@@ -743,6 +744,7 @@ Static GitHub Pages portfolio for a Senior Product Owner / Technical Product Man
 - \`index.html\` - premium portfolio homepage
 - \`projects/\` - product delivery case studies
 - \`blog/\` - 45 technical blog posts plus index
+- \`jira-resume/\` - interactive Jira-board resume mode
 - \`assets/resume/\` - published PDF resume
 - \`resume/\` - resume preview and supporting SEO page
 - \`assets/css/style.css\` and \`assets/js/main.js\` - lightweight frontend
@@ -768,6 +770,7 @@ function homePage() {
       <p class="hero-lede">I turn regulated financial workflows, enterprise architecture, and advisor productivity pain into AI-powered product capabilities that teams can ship, measure, and trust.</p>
       <div class="hero-actions">
         <a class="button primary" href="#ai-impact">See AI impact</a>
+        <a class="button secondary" href="jira-resume/">Switch to Jira Resume</a>
         <a class="button secondary" href="${resumePdf}">View resume</a>
       </div>
       <dl class="hero-stats" aria-label="Profile highlights">
@@ -999,6 +1002,185 @@ function resumePage() {
   });
 }
 
+function jiraResumePage() {
+  const issues = [
+    {
+      key: "VP-101",
+      column: "Backlog",
+      type: "Epic",
+      category: "strategy",
+      title: "AI product leadership for enterprise wealth platforms",
+      points: 13,
+      priority: "Highest",
+      summary: "Define and deliver AI-assisted advisor workflows that save time while preserving enterprise trust.",
+      criteria: ["MVP scope connects to measurable advisor productivity", "Governance, telemetry, and quality gates are part of the release plan", "Business, engineering, and UX understand the trade-offs"],
+      evidence: "Intelliflo IQ automated data population across 190+ platform fields and reduced advisor administration from hours to minutes."
+    },
+    {
+      key: "VP-124",
+      column: "Backlog",
+      type: "Story",
+      category: "strategy",
+      title: "As an executive stakeholder, I need a roadmap that explains outcomes",
+      points: 8,
+      priority: "High",
+      summary: "Roadmap decisions are framed around customer value, business impact, technical risk, and release sequencing.",
+      criteria: ["Epics map to outcomes, not just features", "Dependencies and risks are visible before sprint commitment", "Stakeholders know what changed and why"],
+      evidence: "Delivered across CRM, financial planning, reporting, client review, and advisor productivity initiatives."
+    },
+    {
+      key: "VP-207",
+      column: "Ready for Sprint",
+      type: "Story",
+      category: "delivery",
+      title: "As an engineering squad, we need crisp stories and acceptance criteria",
+      points: 5,
+      priority: "High",
+      summary: "Translate discovery and strategy into backlog items teams can estimate, build, test, and release.",
+      criteria: ["Stories include user intent, workflow context, edge cases, and non-functional needs", "Acceptance criteria are testable and implementation-aware", "Definition of Done reduces release ambiguity"],
+      evidence: "Improved story quality and delivery discipline, supporting fewer post-release defect and rework loops."
+    },
+    {
+      key: "VP-238",
+      column: "Ready for Sprint",
+      type: "Task",
+      category: "technical",
+      title: "Map API, microservice, and integration trade-offs before build",
+      points: 5,
+      priority: "Medium",
+      summary: "Use engineering background to identify service boundaries, data contracts, authentication, monitoring, and fallback behavior early.",
+      criteria: ["API behavior and error paths are clear", "Integration dependencies have owners", "Observability and support needs are known before launch"],
+      evidence: "Hands-on background across REST APIs, microservices, IBM MQ integrations, SQL Server, Azure, AWS, and enterprise systems."
+    },
+    {
+      key: "VP-302",
+      column: "In Progress",
+      type: "Story",
+      category: "wealth",
+      title: "As an advisor, I need client workflows that reduce context switching",
+      points: 8,
+      priority: "High",
+      summary: "Design advisor journeys across Outlook, CRM, client reviews, financial planning, reporting, and client engagement.",
+      criteria: ["Workflow starts from real advisor behavior", "Client context moves between systems with less rekeying", "Auditability and permissions are handled"],
+      evidence: "Delivered Outlook Integration, Client Review, CRM enhancements, Financial Planning, Fact Find, Reporting, and Money Alive Integration."
+    },
+    {
+      key: "VP-327",
+      column: "In Progress",
+      type: "Spike",
+      category: "technical",
+      title: "Investigate regulated SaaS launch readiness",
+      points: 3,
+      priority: "Medium",
+      summary: "Make releases boring in the best way: tested, observable, communicated, and supportable.",
+      criteria: ["Release notes explain user impact", "Support and client-facing teams have context", "Metrics exist for adoption, quality, and issues"],
+      evidence: "SAFe Agile delivery across PI planning, sprint planning, refinement, reviews, retrospectives, and production releases."
+    },
+    {
+      key: "VP-401",
+      column: "Done",
+      type: "Outcome",
+      category: "delivery",
+      title: "Ship complex product increments across enterprise SaaS",
+      points: 13,
+      priority: "Done",
+      summary: "Convert ambiguity into shipped capabilities across multi-team, regulated, technically complex environments.",
+      criteria: ["Discovery informs roadmap", "Delivery teams understand value and scope", "Launch outcomes are measurable"],
+      evidence: "8+ years across Intelliflo, Broadridge Financial Solutions, and GTKonnect acquired by EY."
+    },
+    {
+      key: "VP-418",
+      column: "Done",
+      type: "Outcome",
+      category: "career",
+      title: "Progress from engineer to Senior Product Owner",
+      points: 8,
+      priority: "Done",
+      summary: "A rare blend of product leadership, platform thinking, architecture fluency, and delivery ownership.",
+      criteria: ["Can speak business value with leaders", "Can speak technical trade-offs with engineers", "Can keep teams moving through ambiguity"],
+      evidence: "Career path: Associate Software Developer, Senior Software Engineer, Product Owner, Senior Product Owner."
+    }
+  ];
+  const columns = ["Backlog", "Ready for Sprint", "In Progress", "Done"];
+  const board = columns.map((column) => `<section class="jira-column" aria-labelledby="jira-${slugify(column)}">
+    <div class="jira-column-head">
+      <h2 id="jira-${slugify(column)}">${column}</h2>
+      <span>${issues.filter((issue) => issue.column === column).length}</span>
+    </div>
+    ${issues.filter((issue) => issue.column === column).map((issue) => `<article class="jira-card reveal" data-jira-card data-jira-category="${issue.category}" data-jira-text="${escapeHtml(`${issue.key} ${issue.title} ${issue.summary} ${issue.evidence}`.toLowerCase())}">
+      <div class="jira-card-top"><span class="jira-key">${issue.key}</span><span class="jira-type">${issue.type}</span></div>
+      <h3>${issue.title}</h3>
+      <p>${issue.summary}</p>
+      <dl class="jira-meta">
+        <div><dt>SP</dt><dd>${issue.points}</dd></div>
+        <div><dt>Priority</dt><dd>${issue.priority}</dd></div>
+      </dl>
+      <details>
+        <summary>Acceptance criteria and evidence</summary>
+        <ul>${issue.criteria.map((item) => `<li>${item}</li>`).join("")}</ul>
+        <p><strong>Evidence:</strong> ${issue.evidence}</p>
+      </details>
+    </article>`).join("")}
+  </section>`).join("");
+  const body = `<section class="page-hero jira-hero">
+    <p class="eyebrow">Jira Resume Mode</p>
+    <h1>Venkat's resume, rebuilt as a product delivery board.</h1>
+    <p>Scan my strengths like a Jira project: strategy epics, sprint-ready product ownership, technical stories, wealth management outcomes, and shipped evidence.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="../index.html">Switch to cinematic portfolio</a>
+      <a class="button secondary" href="../resume/">Classic resume page</a>
+      <a class="button secondary" href="../${resumePdf}">Open PDF</a>
+    </div>
+  </section>
+
+  <section class="section jira-dashboard" aria-label="Jira resume controls">
+    <div class="jira-summary reveal">
+      <div><span>Candidate</span><strong>Senior Product Owner</strong></div>
+      <div><span>Domain</span><strong>Enterprise SaaS + WealthTech</strong></div>
+      <div><span>Delivery</span><strong>SAFe Agile + AI Products</strong></div>
+      <div><span>Signal</span><strong>Engineer to Product Leader</strong></div>
+    </div>
+    <div class="jira-controls reveal">
+      <div class="jira-filter-group" role="group" aria-label="Filter Jira resume stories">
+        <button type="button" class="is-active" data-jira-filter="all">All</button>
+        <button type="button" data-jira-filter="strategy">Strategy</button>
+        <button type="button" data-jira-filter="delivery">Delivery</button>
+        <button type="button" data-jira-filter="technical">Technical</button>
+        <button type="button" data-jira-filter="wealth">Wealth</button>
+        <button type="button" data-jira-filter="career">Career</button>
+      </div>
+      <label class="jira-search"><span class="sr-only">Search Jira resume</span><input data-jira-search placeholder="Search stories, outcomes, APIs, AI, CRM"></label>
+    </div>
+  </section>
+
+  <section class="section jira-board-section" aria-label="Jira resume board">
+    <div class="jira-board" data-jira-board>${board}</div>
+  </section>
+
+  <section class="section jira-retro">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Sprint review</p>
+        <h2>Why this board matters to recruiters.</h2>
+      </div>
+      <a class="button primary" href="mailto:${email}">Start conversation</a>
+    </div>
+    <div class="retro-grid">
+      <article class="content-card reveal"><h3>What went well</h3><p>Product strategy is backed by delivery discipline, technical fluency, and shipped outcomes in regulated enterprise SaaS.</p></article>
+      <article class="content-card reveal"><h3>Risks reduced</h3><p>Engineering background helps uncover integration, API, cloud, observability, and data-quality concerns before they become sprint surprises.</p></article>
+      <article class="content-card reveal"><h3>Next sprint</h3><p>Best-fit roles: Senior Product Owner, Technical Product Manager, AI Product Manager, Enterprise SaaS Product Owner, or WealthTech Product Lead.</p></article>
+    </div>
+  </section>`;
+  return pageShell({
+    file: "jira-resume/index.html",
+    title: `Jira Resume | ${author}`,
+    description: "A Jira-board version of Venkata Prasad Muraharisetty's resume, highlighting product strategy, AI products, enterprise SaaS, wealth management, technical product management, and delivery outcomes.",
+    body,
+    canonical: absolute("jira-resume/"),
+    jsonLd: [personSchema, breadcrumbSchema([{ name: "Home", url: siteUrl }, { name: "Jira Resume", url: absolute("jira-resume/") }])]
+  });
+}
+
 function js() {
   return `
 const root=document.documentElement;
@@ -1092,6 +1274,12 @@ document.querySelector("[data-chat-open]")?.addEventListener("click",openChat);
 document.querySelector("[data-chat-close]")?.addEventListener("click",closeChat);
 document.querySelectorAll("[data-chat-prompt]").forEach((button)=>button.addEventListener("click",()=>{const prompt=button.textContent.trim();addChatLine("You",prompt);addChatLine("JARVIS",jarvisAnswer(button.dataset.chatPrompt+" "+prompt));openChat()}));
 document.querySelector("[data-chat-form]")?.addEventListener("submit",(event)=>{event.preventDefault();const text=chatInput?.value.trim();if(!text)return;chatInput.value="";addChatLine("You",text);addChatLine("JARVIS",jarvisAnswer(text))});
+const jiraCards=[...document.querySelectorAll("[data-jira-card]")];
+const jiraSearch=document.querySelector("[data-jira-search]");
+let jiraFilter="all";
+function applyJiraFilters(){const query=(jiraSearch?.value||"").trim().toLowerCase();jiraCards.forEach((card)=>{const category=card.dataset.jiraCategory;const text=card.dataset.jiraText||card.textContent.toLowerCase();const visible=(jiraFilter==="all"||category===jiraFilter)&&(!query||text.includes(query));card.hidden=!visible})}
+document.querySelectorAll("[data-jira-filter]").forEach((button)=>button.addEventListener("click",()=>{jiraFilter=button.dataset.jiraFilter;document.querySelectorAll("[data-jira-filter]").forEach((item)=>item.classList.toggle("is-active",item===button));applyJiraFilters();award("SECTION_SCANNER",5)}));
+jiraSearch?.addEventListener("input",applyJiraFilters);
 console.log("Hello recruiter. You found developer mode. Try hire()");
 globalThis.hire=()=>("Candidate Loaded: Senior Product Owner | AI Products | Enterprise SaaS | Wealth Management");
 const seenSections=new Set();
@@ -1101,12 +1289,13 @@ document.querySelectorAll(".reveal").forEach((el)=>observer.observe(el));
 }
 
 function main() {
-  ["blog", "projects", "resume", "assets/css", "assets/js", "assets/img", "scripts"].forEach(ensure);
+  ["blog", "projects", "resume", "jira-resume", "assets/css", "assets/js", "assets/img", "scripts"].forEach(ensure);
   write("index.html", homePage());
   write("blog/index.html", blogIndex());
   posts.forEach((p) => write(`blog/${p.slug}/index.html`, articlePage(p)));
   products.forEach((p) => write(`projects/${p.slug}/index.html`, projectPage(p)));
   write("resume/index.html", resumePage());
+  write("jira-resume/index.html", jiraResumePage());
   write("assets/css/style.css", css());
   write("assets/js/main.js", js());
   write("assets/img/favicon.svg", svg("VP", "VP", "#4fd1c5", "#8b5cf6"));

@@ -89,6 +89,12 @@ document.querySelector("[data-chat-open]")?.addEventListener("click",openChat);
 document.querySelector("[data-chat-close]")?.addEventListener("click",closeChat);
 document.querySelectorAll("[data-chat-prompt]").forEach((button)=>button.addEventListener("click",()=>{const prompt=button.textContent.trim();addChatLine("You",prompt);addChatLine("JARVIS",jarvisAnswer(button.dataset.chatPrompt+" "+prompt));openChat()}));
 document.querySelector("[data-chat-form]")?.addEventListener("submit",(event)=>{event.preventDefault();const text=chatInput?.value.trim();if(!text)return;chatInput.value="";addChatLine("You",text);addChatLine("JARVIS",jarvisAnswer(text))});
+const jiraCards=[...document.querySelectorAll("[data-jira-card]")];
+const jiraSearch=document.querySelector("[data-jira-search]");
+let jiraFilter="all";
+function applyJiraFilters(){const query=(jiraSearch?.value||"").trim().toLowerCase();jiraCards.forEach((card)=>{const category=card.dataset.jiraCategory;const text=card.dataset.jiraText||card.textContent.toLowerCase();const visible=(jiraFilter==="all"||category===jiraFilter)&&(!query||text.includes(query));card.hidden=!visible})}
+document.querySelectorAll("[data-jira-filter]").forEach((button)=>button.addEventListener("click",()=>{jiraFilter=button.dataset.jiraFilter;document.querySelectorAll("[data-jira-filter]").forEach((item)=>item.classList.toggle("is-active",item===button));applyJiraFilters();award("SECTION_SCANNER",5)}));
+jiraSearch?.addEventListener("input",applyJiraFilters);
 console.log("Hello recruiter. You found developer mode. Try hire()");
 globalThis.hire=()=>("Candidate Loaded: Senior Product Owner | AI Products | Enterprise SaaS | Wealth Management");
 const seenSections=new Set();
