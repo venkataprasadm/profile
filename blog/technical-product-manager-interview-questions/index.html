@@ -41,6 +41,19 @@
       <span aria-hidden="true">◐</span>
     </button>
   </header>
+  <aside class="game-hud" data-hud aria-label="Portfolio game progress">
+    <button class="hud-main" type="button" data-hud-toggle aria-expanded="false">
+      <span class="hud-level" data-level-label>Lv1 Visitor</span>
+      <span class="hud-xp"><span data-xp-bar></span></span>
+      <span data-xp-text>0 XP</span>
+    </button>
+    <div class="hud-drawer" data-hud-drawer>
+      <strong>Product Quest HUD</strong>
+      <p><span data-achievement-count>0</span>/8 achievements unlocked</p>
+      <label class="focus-switch"><input type="checkbox" data-recruiter-mode> Recruiter / focus mode</label>
+      <p class="hud-hint">Press <kbd>~</kbd> for terminal. Try the Konami code.</p>
+    </div>
+  </aside>
   <main id="main"><article class="article">
     <header class="article-header">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../">Blog</a><span>/</span><span>Technical Product Manager Interview Questions</span></nav>
@@ -115,8 +128,16 @@ Review cadence: weekly for learning, monthly for roadmap decisions.</code></pre>
       <a href="mailto:venkataprasadmcareer@outlook.com">venkataprasadmcareer@outlook.com</a>
       <a href="../../sitemap.xml">Sitemap</a>
       <a href="../../rss.xml">RSS</a>
+      <button class="terminal-cursor" type="button" data-terminal-open aria-label="Open hidden terminal">_</button>
     </div>
   </footer>
+  <div class="terminal-modal" data-terminal hidden>
+    <div class="terminal-panel" role="dialog" aria-modal="true" aria-label="Hidden portfolio terminal">
+      <div class="terminal-head"><strong>venkat@product-owner-engine</strong><button type="button" data-terminal-close>Close</button></div>
+      <pre data-terminal-output>Type help to list commands.</pre>
+      <label><span class="sr-only">Terminal command</span><input data-terminal-input autocomplete="off" spellcheck="false" placeholder="help"></label>
+    </div>
+  </div>
   <script src="../../assets/js/main.js" defer></script>
 </body>
 </html>
