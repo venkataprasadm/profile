@@ -42,6 +42,7 @@
   </header>
   <main id="main">
   <section class="hero">
+    <canvas class="neural-canvas" data-neural-canvas aria-hidden="true"></canvas>
     <div class="hero-copy reveal">
       <p class="eyebrow">Senior Product Owner - AI Products - Enterprise SaaS - Wealth Management</p>
       <h1>AI-centric product leadership for wealth management SaaS.</h1>
@@ -74,6 +75,33 @@
       <div class="orbit-grid" aria-hidden="true">
         <span>AI Assistants</span><span>Product Strategy</span><span>APIs</span><span>SAFe</span><span>CRM</span><span>WealthTech</span>
       </div>
+    </div>
+  </section>
+
+  <section class="section quest-section" id="quest">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Interactive product quest</p>
+        <h2>Play Senior Product Owner for 45 seconds.</h2>
+      </div>
+      <button class="button primary" type="button" data-quest-reset>Restart quest</button>
+    </div>
+    <div class="quest-board reveal" data-quest>
+      <div class="quest-stage">
+        <p class="meta">Scenario</p>
+        <h3 data-quest-title>Customer escalation lands during PI planning.</h3>
+        <p data-quest-copy>A strategic client wants an AI-assisted workflow shipped immediately. Engineering sees risk, UX needs discovery, and leadership wants confidence. What do you do first?</p>
+        <div class="quest-options">
+          <button type="button" data-quest-choice="0">Promise the date and push the team</button>
+          <button type="button" data-quest-choice="1">Define MVP scope, risks, success metric, and decision path</button>
+          <button type="button" data-quest-choice="2">Move everything into backlog and wait</button>
+        </div>
+      </div>
+      <aside class="quest-score" aria-live="polite">
+        <span>Product Sense</span>
+        <strong data-quest-score>0</strong>
+        <p data-quest-feedback>Choose like a product leader. Good trade-offs unlock achievements.</p>
+      </aside>
     </div>
   </section>
 
