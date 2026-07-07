@@ -219,6 +219,21 @@ function pageShell({ file = "index.html", title, description, body, canonical, t
   ${schemas.map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`).join("\n  ")}
 </head>
 <body>
+  <div class="jarvis-loader" data-jarvis-loader>
+    <div class="jarvis-core" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="eyebrow">JARVIS Product OS</p>
+    <h1>Buckle up, recruiter.</h1>
+    <p data-loader-line>Initializing Product Owner Engine...</p>
+    <div class="loader-track"><span data-loader-bar></span></div>
+    <ol class="loader-stages" data-loader-stages>
+      <li>Epic created</li>
+      <li>User stories sliced</li>
+      <li>Sprint planning aligned</li>
+      <li>Acceptance criteria locked</li>
+      <li>Deployed to production</li>
+    </ol>
+    <button type="button" class="button secondary" data-loader-skip>Skip intro</button>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" data-header>
     <a class="brand" href="${prefix}index.html" aria-label="${author} home">
@@ -243,7 +258,7 @@ function pageShell({ file = "index.html", title, description, body, canonical, t
       <strong>Product Quest HUD</strong>
       <p><span data-achievement-count>0</span>/8 achievements unlocked</p>
       <label class="focus-switch"><input type="checkbox" data-recruiter-mode> Recruiter / focus mode</label>
-      <p class="hud-hint">Press <kbd>~</kbd> for terminal. Try the Konami code.</p>
+      <p class="hud-hint">Open terminal from the footer button. Keyboard fans can also press <kbd>~</kbd>.</p>
     </div>
   </aside>
   <main id="main">${body}</main>
@@ -264,6 +279,35 @@ function pageShell({ file = "index.html", title, description, body, canonical, t
       <div class="terminal-head"><strong>venkat@product-owner-engine</strong><button type="button" data-terminal-close>Close</button></div>
       <pre data-terminal-output>Type help to list commands.</pre>
       <label><span class="sr-only">Terminal command</span><input data-terminal-input autocomplete="off" spellcheck="false" placeholder="help"></label>
+    </div>
+  </div>
+  <div class="mission-popup" data-mission-popup hidden>
+    <div class="mission-card" role="dialog" aria-modal="true" aria-label="Play a product planning game">
+      <p class="eyebrow">JARVIS detected a curious visitor</p>
+      <h2>Want to play a planning game with Venkat?</h2>
+      <p>Match product lifecycle artifacts to the right stage and unlock the Product Strategist badge.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="${prefix}index.html#planning-game" data-mission-start>Start game</a>
+        <button class="button secondary" type="button" data-mission-close>Maybe later</button>
+      </div>
+    </div>
+  </div>
+  <button class="jarvis-agent" type="button" data-chat-open aria-label="Open JARVIS AI helper"><span>J</span><strong>Ask JARVIS</strong></button>
+  <div class="chat-panel" data-chat hidden>
+    <div class="chat-card" role="dialog" aria-modal="true" aria-label="JARVIS portfolio assistant">
+      <div class="chat-head"><strong>JARVIS - Venkat's AI agent</strong><button type="button" data-chat-close>Close</button></div>
+      <div class="chat-log" data-chat-log>
+        <p><strong>JARVIS:</strong> Ask about Intelliflo IQ, product strategy, APIs, SAFe Agile, or why Venkat is a strong hire.</p>
+      </div>
+      <div class="chat-prompts">
+        <button type="button" data-chat-prompt="ai">Explain Intelliflo IQ</button>
+        <button type="button" data-chat-prompt="hire">Why hire Venkat?</button>
+        <button type="button" data-chat-prompt="api">Show architecture skills</button>
+      </div>
+      <form data-chat-form>
+        <label><span class="sr-only">Ask JARVIS</span><input data-chat-input placeholder="Ask JARVIS anything about Venkat"></label>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
   <script src="${prefix}assets/js/main.js" defer></script>
@@ -643,7 +687,8 @@ function css() {
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
 .ai-console{padding:1.25rem;border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.12),rgba(139,92,246,.08)),var(--surface);box-shadow:var(--shadow)}.console-topline{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}.console-topline span{color:var(--brand);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.12em}.console-topline strong{font-size:1.15rem}.ai-console p{min-height:5.5rem;color:var(--muted);font-size:1.05rem}.console-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin:1rem 0}.console-metrics span{padding:.8rem;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.045);color:var(--muted);font-size:.83rem}.console-metrics strong{display:block;color:var(--text);font-size:1.1rem}.console-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}.console-actions button{min-height:42px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--muted);font-weight:800}.console-actions button:hover,.console-actions button:focus-visible,.console-actions button.is-active{background:var(--brand);color:#07111f}.impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.hero{position:relative;overflow:hidden}.hero>*:not(.neural-canvas){position:relative;z-index:1}.neural-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.58;filter:saturate(1.3);pointer-events:none}.quest-section{padding-top:0}.quest-board{display:grid;grid-template-columns:minmax(0,1.25fr) 280px;gap:1rem;align-items:stretch}.quest-stage,.quest-score{border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.08),rgba(255,255,255,.03)),var(--surface);box-shadow:var(--shadow);padding:1.25rem}.quest-stage h3{font-size:clamp(1.4rem,3vw,2.25rem);margin:.2rem 0 .75rem}.quest-stage p:not(.meta),.quest-score p{color:var(--muted)}.quest-options{display:grid;gap:.7rem;margin-top:1rem}.quest-options button{min-height:48px;text-align:left;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);font-weight:800;padding:.85rem 1rem}.quest-options button:hover,.quest-options button:focus-visible{border-color:var(--brand);transform:translateY(-1px)}.quest-score{display:grid;align-content:center;text-align:center}.quest-score span{color:var(--brand);font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.12em}.quest-score strong{font-size:4rem;line-height:1;margin:.5rem 0}.achievement-toast{position:fixed;right:1rem;bottom:1rem;z-index:30;max-width:330px;padding:1rem;border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg,rgba(79,209,197,.94),rgba(139,92,246,.94));color:#07111f;box-shadow:var(--shadow);transform:translateY(130%);transition:transform .4s ease}.achievement-toast.is-visible{transform:translateY(0)}.achievement-toast strong{display:block}.achievement-toast span{font-weight:800}.cyber-mode{--bg:#04070d;--surface:#07111f;--surface-2:#0c1f33;--brand:#00f5ff;--brand-2:#ff3df2;--accent:#faff00}.cyber-mode body{background:linear-gradient(180deg,#04070d,#10122a)}
 .game-hud{position:fixed;right:1rem;top:82px;z-index:25;width:min(330px,calc(100vw - 2rem))}.hud-main{display:grid;grid-template-columns:auto 1fr auto;gap:.65rem;align-items:center;width:100%;min-height:46px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--surface) 90%,transparent);color:var(--text);padding:.55rem .75rem;box-shadow:var(--shadow);backdrop-filter:blur(14px)}.hud-level{font-weight:900;color:var(--brand);font-size:.82rem}.hud-xp{height:8px;border-radius:999px;background:var(--surface-2);overflow:hidden}.hud-xp span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--accent));transition:width .35s ease}.hud-main [data-xp-text]{font-size:.78rem;color:var(--muted);font-weight:800}.hud-drawer{display:none;margin-top:.5rem;border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:1rem;box-shadow:var(--shadow)}.game-hud.is-open .hud-drawer{display:block}.focus-switch{display:flex;align-items:center;gap:.5rem;margin:.75rem 0;color:var(--muted)}.hud-hint{margin:0;color:var(--muted);font-size:.86rem}.terminal-cursor{border:0;background:transparent;color:var(--brand);font-weight:900;font-size:1.1rem}.terminal-modal{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:rgba(0,0,0,.58);padding:1rem}.terminal-modal[hidden]{display:none}.terminal-panel{width:min(720px,100%);border:1px solid var(--brand);border-radius:8px;background:#050b14;color:#d7f9ff;box-shadow:var(--shadow);padding:1rem}.terminal-head{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:.75rem;margin-bottom:.75rem}.terminal-head button{border:1px solid var(--line);border-radius:8px;background:transparent;color:#d7f9ff;padding:.35rem .65rem}.terminal-panel pre{min-height:240px;max-height:50vh;margin:0 0 .75rem;white-space:pre-wrap}.terminal-panel input{width:100%;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:#08111f;color:#d7f9ff;padding:.75rem}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.recruiter-mode .neural-canvas,.recruiter-mode .achievement-toast{display:none}.recruiter-mode .reveal{opacity:1;transform:none}.recruiter-mode .hero{min-height:auto}.konami-mode{filter:contrast(1.15) saturate(1.45)}.konami-mode:before{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.08),rgba(255,255,255,.08) 1px,transparent 1px,transparent 4px);mix-blend-mode:overlay}
-@media (max-width:900px){.nav-toggle{display:flex}.site-nav{position:absolute;left:1rem;right:1rem;top:68px;display:none;flex-direction:column;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.5rem}.site-nav.is-open{display:flex}.hero,.split,.tech-radar,.resume-layout,.quest-board{grid-template-columns:1fr}.hero{min-height:auto;padding-top:4rem}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{grid-template-columns:1fr 1fr}.section-heading{display:block}.contact-band,.site-footer{display:block}.footer-links{margin-top:1rem}}
+.jarvis-loader{position:fixed;inset:0;z-index:80;display:grid;place-items:center;text-align:center;padding:2rem;background:radial-gradient(circle at 50% 35%,rgba(79,209,197,.2),transparent 24%),#050b14;color:var(--text);transition:opacity .45s ease,visibility .45s ease}.jarvis-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}.jarvis-loader h1{font-size:clamp(2.4rem,7vw,5.5rem);line-height:.95;margin:.4rem 0}.jarvis-loader>p:not(.eyebrow){color:var(--muted);font-size:1.1rem}.jarvis-core{position:relative;width:170px;height:170px;display:grid;place-items:center}.jarvis-core span{position:absolute;inset:0;border:1px solid rgba(79,209,197,.55);border-radius:50%;animation:jarvis-spin 4s linear infinite}.jarvis-core span:nth-child(2){inset:24px;border-color:rgba(139,92,246,.62);animation-duration:2.8s;animation-direction:reverse}.jarvis-core span:nth-child(3){inset:52px;border-color:rgba(247,201,72,.7);animation-duration:1.8s}.loader-track{width:min(520px,90vw);height:10px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface);margin:1rem auto}.loader-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--accent),var(--brand-2));transition:width .25s ease}.loader-stages{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.35rem;color:var(--muted)}.loader-stages li.is-active{color:var(--brand);font-weight:900}.loader-stages li.is-done{color:var(--accent)}@keyframes jarvis-spin{to{transform:rotate(360deg)}}.mission-popup,.chat-panel{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(0,0,0,.58);padding:1rem}.mission-popup[hidden],.chat-panel[hidden]{display:none}.mission-card,.chat-card{width:min(620px,100%);border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.12),rgba(139,92,246,.08)),var(--surface);box-shadow:var(--shadow);padding:1.25rem}.mission-card h2{margin-top:.2rem}.jarvis-agent{position:fixed;right:1rem;bottom:1rem;z-index:24;display:flex;align-items:center;gap:.55rem;border:1px solid var(--line);border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#07111f;padding:.55rem .8rem;font-weight:900;box-shadow:var(--shadow)}.jarvis-agent span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.75)}.chat-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;border-bottom:1px solid var(--line);padding-bottom:.75rem;margin-bottom:.75rem}.chat-head button,.chat-prompts button,.chat-card form button{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);padding:.55rem .75rem;font-weight:800}.chat-log{display:grid;gap:.65rem;max-height:330px;overflow:auto;color:var(--muted);margin-bottom:.75rem}.chat-log p{margin:0;padding:.7rem;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.04)}.chat-prompts{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}.chat-card form{display:grid;grid-template-columns:1fr auto;gap:.5rem}.chat-card input{width:100%;border:1px solid var(--line);border-radius:8px;background:#08111f;color:var(--text);padding:.75rem}.planning-game{padding-top:0}.match-game{display:grid;grid-template-columns:1fr 1fr 280px;gap:1rem}.match-column,.match-status{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:1.25rem;box-shadow:var(--shadow)}.match-column{display:grid;gap:.65rem;align-content:start}.match-column h3{margin:0 0 .4rem}.match-column button{min-height:46px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);font-weight:800}.match-column button.is-selected{border-color:var(--accent);box-shadow:0 0 0 2px rgba(34,228,172,.18)}.match-column button.is-matched{background:rgba(34,228,172,.16);border-color:var(--accent);color:var(--accent)}.match-column button.is-wrong{background:rgba(255,84,112,.14);border-color:#ff5470}.match-status{text-align:center;display:grid;align-content:center}.match-status span{color:var(--brand);font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.12em}.match-status strong{font-size:3rem}.match-status p{color:var(--muted)}
+@media (max-width:900px){.nav-toggle{display:flex}.site-nav{position:absolute;left:1rem;right:1rem;top:68px;display:none;flex-direction:column;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.5rem}.site-nav.is-open{display:flex}.hero,.split,.tech-radar,.resume-layout,.quest-board,.match-game{grid-template-columns:1fr}.hero{min-height:auto;padding-top:4rem}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{grid-template-columns:1fr 1fr}.section-heading{display:block}.contact-band,.site-footer{display:block}.footer-links{margin-top:1rem}.game-hud{top:auto;bottom:4.8rem}.jarvis-agent strong{display:none}}
 @media (max-width:620px){.brand small{display:none}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid,.console-metrics,.console-actions{grid-template-columns:1fr}.hero h1,.page-hero h1{font-size:2.65rem}.section,.hero,.page-hero,.article,.case-study{padding-left:1rem;padding-right:1rem}.site-header{padding:.7rem 1rem}.orbit-grid{grid-template-columns:1fr}.cover-large{min-height:180px}.ai-console p{min-height:auto}}
 @media print{.site-header,.site-footer,.theme-toggle,.nav-toggle,.hero-actions{display:none}.page-hero,.section{padding:1rem 0}body{background:#fff;color:#111}.resume-sidebar,.resume-main,.content-card{box-shadow:none}}
 `;
@@ -775,6 +820,37 @@ function homePage() {
         <span>Product Sense</span>
         <strong data-quest-score>0</strong>
         <p data-quest-feedback>Choose like a product leader. Good trade-offs unlock achievements.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section planning-game" id="planning-game">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Product planning match game</p>
+        <h2>Match the artifact to the product lifecycle stage.</h2>
+      </div>
+      <button class="button secondary" type="button" data-match-reset>Reset board</button>
+    </div>
+    <div class="match-game reveal" data-match-game>
+      <div class="match-column">
+        <h3>Artifacts</h3>
+        <button type="button" data-match-card="epic">Epic</button>
+        <button type="button" data-match-card="story">User Story</button>
+        <button type="button" data-match-card="acceptance">Acceptance Criteria</button>
+        <button type="button" data-match-card="release">Release Note</button>
+      </div>
+      <div class="match-column">
+        <h3>Lifecycle stages</h3>
+        <button type="button" data-match-slot="discovery">Discovery</button>
+        <button type="button" data-match-slot="refinement">Backlog refinement</button>
+        <button type="button" data-match-slot="validation">Validation</button>
+        <button type="button" data-match-slot="launch">Production launch</button>
+      </div>
+      <aside class="match-status" aria-live="polite">
+        <span>Planning score</span>
+        <strong data-match-score>0/4</strong>
+        <p data-match-feedback>Select an artifact, then choose the lifecycle stage where it creates the most value.</p>
       </aside>
     </div>
   </section>
@@ -935,6 +1011,16 @@ nav?.addEventListener("click",(event)=>{if(event.target.matches("a")){nav.classL
 const aiCopy={advisor:"Advisor value: AI assistance reduces repetitive data entry and turns advisor effort toward client conversations, review prep, and advice quality.",enterprise:"Enterprise trust: AI capability is framed around permissions, data governance, measurable adoption, telemetry, and release confidence.",delivery:"Delivery model: MVP scope, epics, user stories, acceptance criteria, DoD discipline, and SAFe ceremonies connect strategy to working software."};
 const aiOutput=document.querySelector("[data-ai-output]");
 document.querySelectorAll("[data-ai-persona]").forEach((button)=>button.addEventListener("click",()=>{document.querySelectorAll("[data-ai-persona]").forEach((item)=>item.classList.remove("is-active"));button.classList.add("is-active");if(aiOutput){aiOutput.textContent=aiCopy[button.dataset.aiPersona]}}));
+const loader=document.querySelector("[data-jarvis-loader]");
+const loaderLine=document.querySelector("[data-loader-line]");
+const loaderBar=document.querySelector("[data-loader-bar]");
+const loaderStages=[...document.querySelectorAll("[data-loader-stages] li")];
+const missionPopup=document.querySelector("[data-mission-popup]");
+function hideLoader(){loader?.classList.add("is-hidden");sessionStorage.setItem("jarvis_intro_seen","1");setTimeout(()=>{if(missionPopup&&!sessionStorage.getItem("mission_popup_seen"))missionPopup.hidden=false},650)}
+if(loader&&sessionStorage.getItem("jarvis_intro_seen")){loader.hidden=true}else if(loader){const lines=["Epic created","Stories created","Sprint planning aligned","Acceptance criteria locked","Deployed to production"];let step=0;const tick=()=>{if(step<lines.length){if(loaderLine)loaderLine.textContent=lines[step]+"...";if(loaderBar)loaderBar.style.width=((step+1)/lines.length*100)+"%";loaderStages.forEach((item,index)=>{item.classList.toggle("is-active",index===step);item.classList.toggle("is-done",index<step)});step+=1;setTimeout(tick,520)}else{if(loaderLine)loaderLine.textContent="100% complete. Portfolio deployed.";loaderStages.forEach((item)=>item.classList.add("is-done"));setTimeout(hideLoader,650)}};setTimeout(tick,350)}
+document.querySelector("[data-loader-skip]")?.addEventListener("click",hideLoader);
+document.querySelector("[data-mission-close]")?.addEventListener("click",()=>{sessionStorage.setItem("mission_popup_seen","1");if(missionPopup)missionPopup.hidden=true});
+document.querySelector("[data-mission-start]")?.addEventListener("click",()=>{sessionStorage.setItem("mission_popup_seen","1");if(missionPopup)missionPopup.hidden=true});
 const toast=document.createElement("div");
 toast.className="achievement-toast";
 toast.setAttribute("role","status");
@@ -945,7 +1031,7 @@ function unlock(title,detail){toast.innerHTML="<strong>Achievement unlocked</str
 const levels=[["Lv1 Visitor",0],["Lv2 Stakeholder",50],["Lv3 Collaborator",120],["Lv4 Sprint Ally",220],["Lv5 Product Legend",350]];
 const storageKey="po_game_state_v1";
 const state=JSON.parse(localStorage.getItem(storageKey)||"{\\"xp\\":0,\\"achievements\\":[],\\"recruiter\\":false}");
-const achievementText={FIRST_CONTACT:["First Contact","Product Owner Engine initialized."],SECTION_SCANNER:["Section Scanner","You started unlocking the narrative."],QUEST_COMPLETE:["Sprint Survivor","You completed the Product Owner Quest."],RESUME_DOWNLOAD:["Headhunter Signal","Resume opened or downloaded."],CONTACT_CLICK:["Join My Party","Contact intent detected."],TERMINAL_HACKER:["Terminal Hacker","Hidden command line discovered."],KONAMI_CODE:["Retro Strategist","Konami mode unlocked."],THEME_ENGINE:["Theme Engine","You toggled the experience layer."]};
+const achievementText={FIRST_CONTACT:["First Contact","Product Owner Engine initialized."],SECTION_SCANNER:["Section Scanner","You started unlocking the narrative."],QUEST_COMPLETE:["Sprint Survivor","You completed the Product Owner Quest."],SKILL_SCANNER:["Product Strategist","You matched the planning board."],AI_WHISPERER:["AI Whisperer","You spoke with JARVIS."],RESUME_DOWNLOAD:["Headhunter Signal","Resume opened or downloaded."],CONTACT_CLICK:["Join My Party","Contact intent detected."],TERMINAL_HACKER:["Terminal Hacker","Hidden command line discovered."],KONAMI_CODE:["Retro Strategist","Konami mode unlocked."],THEME_ENGINE:["Theme Engine","You toggled the experience layer."]};
 const levelLabel=document.querySelector("[data-level-label]"),xpText=document.querySelector("[data-xp-text]"),xpBar=document.querySelector("[data-xp-bar]"),achievementCount=document.querySelector("[data-achievement-count]");
 function save(){localStorage.setItem(storageKey,JSON.stringify(state))}
 function levelFor(xp){return levels.reduce((found,item)=>xp>=item[1]?item:found,levels[0])}
@@ -976,6 +1062,13 @@ function renderQuest(){const q=quest[questIndex];if(!q||!questTitle)return;quest
 questButtons.forEach((button)=>button.addEventListener("click",()=>{const q=quest[questIndex];const choice=Number(button.dataset.questChoice);questButtons.forEach((item)=>item.disabled=true);if(choice===q.answer){questScore+=100;questFeedback.textContent=q.win;addXp(15);unlock("Product Sense +15 XP",q.win)}else{questScore+=25;questFeedback.textContent="Playable lesson: senior product ownership is about trade-offs, not reflexes.";addXp(5);unlock("Lesson Captured","You found a risky path and learned the better product move.")}questScoreEl.textContent=questScore;questIndex+=1;if(questIndex<quest.length){setTimeout(renderQuest,1100)}else{setTimeout(()=>{questFeedback.textContent="Mission complete. You survived stakeholders, architecture risk, and AI governance.";award("QUEST_COMPLETE",30)},900)}}));
 document.querySelector("[data-quest-reset]")?.addEventListener("click",()=>{questIndex=0;questScore=0;questScoreEl.textContent="0";renderQuest();unlock("Quest Reset","Product Owner Engine ready for another run.")});
 renderQuest();
+let selectedCard=null,matchScore=0;
+const matchMap={epic:"discovery",story:"refinement",acceptance:"validation",release:"launch"};
+const matchScoreEl=document.querySelector("[data-match-score]"),matchFeedback=document.querySelector("[data-match-feedback]");
+function resetMatch(){selectedCard=null;matchScore=0;if(matchScoreEl)matchScoreEl.textContent="0/4";if(matchFeedback)matchFeedback.textContent="Select an artifact, then choose the lifecycle stage where it creates the most value.";document.querySelectorAll("[data-match-card],[data-match-slot]").forEach((button)=>{button.disabled=false;button.classList.remove("is-selected","is-matched","is-wrong")})}
+document.querySelectorAll("[data-match-card]").forEach((button)=>button.addEventListener("click",()=>{selectedCard=button.dataset.matchCard;document.querySelectorAll("[data-match-card]").forEach((item)=>item.classList.remove("is-selected"));button.classList.add("is-selected")}));
+document.querySelectorAll("[data-match-slot]").forEach((slot)=>slot.addEventListener("click",()=>{if(!selectedCard){if(matchFeedback)matchFeedback.textContent="Pick an artifact first. Product planning needs an input.";return}const card=document.querySelector('[data-match-card="'+selectedCard+'"]');if(matchMap[selectedCard]===slot.dataset.matchSlot){card?.classList.add("is-matched");slot.classList.add("is-matched");card.disabled=true;slot.disabled=true;matchScore+=1;if(matchScoreEl)matchScoreEl.textContent=matchScore+"/4";if(matchFeedback)matchFeedback.textContent="Matched. That is product planning with intent.";addXp(10);if(matchScore===4){award("SKILL_SCANNER",30);unlock("Product Strategist","You matched the planning board.")}}else{slot.classList.add("is-wrong");setTimeout(()=>slot.classList.remove("is-wrong"),650);if(matchFeedback)matchFeedback.textContent="Close, but not the best stage. Try another product move."}selectedCard=null;document.querySelectorAll("[data-match-card]").forEach((item)=>item.classList.remove("is-selected"))}));
+document.querySelector("[data-match-reset]")?.addEventListener("click",resetMatch);
 const canvas=document.querySelector("[data-neural-canvas]");
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 if(canvas&&!reduce){const ctx=canvas.getContext("2d");let width=0,height=0,points=[];const pointer={x:.5,y:.5};function resize(){width=canvas.width=canvas.offsetWidth*devicePixelRatio;height=canvas.height=canvas.offsetHeight*devicePixelRatio;points=Array.from({length:48},()=>({x:Math.random()*width,y:Math.random()*height,vx:(Math.random()-.5)*.35*devicePixelRatio,vy:(Math.random()-.5)*.35*devicePixelRatio}))}function draw(){ctx.clearRect(0,0,width,height);for(const p of points){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>width)p.vx*=-1;if(p.y<0||p.y>height)p.vy*=-1;const dx=p.x-pointer.x*width,dy=p.y-pointer.y*height;if(Math.hypot(dx,dy)<180*devicePixelRatio){p.x+=dx*.002;p.y+=dy*.002}}for(let i=0;i<points.length;i++){for(let j=i+1;j<points.length;j++){const a=points[i],b=points[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<150*devicePixelRatio){ctx.strokeStyle="rgba(79,209,197,"+(1-d/(150*devicePixelRatio))*.28+")";ctx.lineWidth=devicePixelRatio;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}}for(const p of points){ctx.fillStyle="rgba(125,211,252,.72)";ctx.beginPath();ctx.arc(p.x,p.y,2.2*devicePixelRatio,0,Math.PI*2);ctx.fill()}requestAnimationFrame(draw)}resize();addEventListener("resize",resize);document.querySelector(".hero")?.addEventListener("pointermove",(event)=>{const rect=canvas.getBoundingClientRect();pointer.x=(event.clientX-rect.left)/rect.width;pointer.y=(event.clientY-rect.top)/rect.height});draw()}
@@ -990,6 +1083,15 @@ document.querySelector("[data-terminal-open]")?.addEventListener("click",openTer
 document.querySelector("[data-terminal-close]")?.addEventListener("click",closeTerminal);
 addEventListener("keydown",(event)=>{if(event.key==="~"){event.preventDefault();openTerminal()}if(event.key==="Escape")closeTerminal()});
 terminalInput?.addEventListener("keydown",(event)=>{if(event.key!=="Enter")return;const command=terminalInput.value.trim().toLowerCase();terminalInput.value="";const lines={help:"Commands: whoami, skills, projects, contact, sudo hire-me, clear, exit",whoami:"Venkata Prasad Muraharisetty - Senior Product Owner for AI-centric Enterprise SaaS and WealthTech.",skills:"Product strategy, SAFe Agile, AI products, REST APIs, microservices, CRM, Azure, AWS, Splunk.",projects:"Intelliflo IQ, Outlook Integration, Money Alive, Client Review, Financial Planning, CRM, ACATS, Global Trade.",contact:"Email: ${email}",["sudo hire-me"]:"Candidate Loaded. Opening email channel..."};if(command==="clear"){terminalOutput.textContent="";return}if(command==="exit"){closeTerminal();return}terminalOutput.textContent+="\\n> "+command+"\\n"+(lines[command]||"Unknown command. Type help.")+"\\n";if(command==="sudo hire-me"){location.href="mailto:${email}?subject=Product%20Role%20Conversation"}});
+const chat=document.querySelector("[data-chat]"),chatLog=document.querySelector("[data-chat-log]"),chatInput=document.querySelector("[data-chat-input]");
+function openChat(){if(chat){chat.hidden=false;chatInput?.focus();award("AI_WHISPERER",20)}}
+function closeChat(){if(chat)chat.hidden=true}
+function jarvisAnswer(text){const q=text.toLowerCase();if(q.includes("iq")||q.includes("ai"))return"Intelliflo IQ is the strongest AI signal: Venkat led delivery of AI-powered Engagement and Advice Assistants that automated 190+ fields and reduced advisor admin from hours to minutes.";if(q.includes("hire")||q.includes("why"))return"Hire Venkat if you need a Senior Product Owner who can translate strategy into shippable SaaS outcomes, speak architecture with engineering, and keep enterprise stakeholders aligned.";if(q.includes("api")||q.includes("architecture"))return"Architecture signal: REST APIs, microservices, IBM MQ, Azure/AWS, SQL Server, .NET, integrations, observability, and enough engineering depth to reduce delivery risk early.";if(q.includes("safe")||q.includes("agile")||q.includes("planning"))return"SAFe signal: PI planning, sprint planning, backlog refinement, epics, user stories, acceptance criteria, release planning, and Definition of Done discipline.";return"JARVIS summary: Venkat is an AI-fluent Senior Product Owner for enterprise SaaS and WealthTech, with engineering depth, measurable product outcomes, and strong delivery discipline."}
+function addChatLine(who,text){if(chatLog){const p=document.createElement("p");p.innerHTML="<strong>"+who+":</strong> "+text;chatLog.appendChild(p);chatLog.scrollTop=chatLog.scrollHeight}}
+document.querySelector("[data-chat-open]")?.addEventListener("click",openChat);
+document.querySelector("[data-chat-close]")?.addEventListener("click",closeChat);
+document.querySelectorAll("[data-chat-prompt]").forEach((button)=>button.addEventListener("click",()=>{const prompt=button.textContent.trim();addChatLine("You",prompt);addChatLine("JARVIS",jarvisAnswer(button.dataset.chatPrompt+" "+prompt));openChat()}));
+document.querySelector("[data-chat-form]")?.addEventListener("submit",(event)=>{event.preventDefault();const text=chatInput?.value.trim();if(!text)return;chatInput.value="";addChatLine("You",text);addChatLine("JARVIS",jarvisAnswer(text))});
 console.log("Hello recruiter. You found developer mode. Try hire()");
 globalThis.hire=()=>("Candidate Loaded: Senior Product Owner | AI Products | Enterprise SaaS | Wealth Management");
 const seenSections=new Set();

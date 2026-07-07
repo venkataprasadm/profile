@@ -27,6 +27,21 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Monitoring AI Products After Launch","description":"What PMs should track across quality, drift, trust, cost, latency, and user feedback.","author":{"@type":"Person","name":"Venkata Prasad Muraharisetty"},"datePublished":"2026-02-15","dateModified":"2026-02-15","mainEntityOfPage":"https://venkataprasadm.com/blog/monitoring-ai-products/","keywords":"AI Products, Monitoring, LLMs"}</script>
 </head>
 <body>
+  <div class="jarvis-loader" data-jarvis-loader>
+    <div class="jarvis-core" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="eyebrow">JARVIS Product OS</p>
+    <h1>Buckle up, recruiter.</h1>
+    <p data-loader-line>Initializing Product Owner Engine...</p>
+    <div class="loader-track"><span data-loader-bar></span></div>
+    <ol class="loader-stages" data-loader-stages>
+      <li>Epic created</li>
+      <li>User stories sliced</li>
+      <li>Sprint planning aligned</li>
+      <li>Acceptance criteria locked</li>
+      <li>Deployed to production</li>
+    </ol>
+    <button type="button" class="button secondary" data-loader-skip>Skip intro</button>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" data-header>
     <a class="brand" href="../../index.html" aria-label="Venkata Prasad Muraharisetty home">
@@ -51,7 +66,7 @@
       <strong>Product Quest HUD</strong>
       <p><span data-achievement-count>0</span>/8 achievements unlocked</p>
       <label class="focus-switch"><input type="checkbox" data-recruiter-mode> Recruiter / focus mode</label>
-      <p class="hud-hint">Press <kbd>~</kbd> for terminal. Try the Konami code.</p>
+      <p class="hud-hint">Open terminal from the footer button. Keyboard fans can also press <kbd>~</kbd>.</p>
     </div>
   </aside>
   <main id="main"><article class="article">
@@ -138,6 +153,35 @@ And returns an auditable response with clear error states.</code></pre>
       <div class="terminal-head"><strong>venkat@product-owner-engine</strong><button type="button" data-terminal-close>Close</button></div>
       <pre data-terminal-output>Type help to list commands.</pre>
       <label><span class="sr-only">Terminal command</span><input data-terminal-input autocomplete="off" spellcheck="false" placeholder="help"></label>
+    </div>
+  </div>
+  <div class="mission-popup" data-mission-popup hidden>
+    <div class="mission-card" role="dialog" aria-modal="true" aria-label="Play a product planning game">
+      <p class="eyebrow">JARVIS detected a curious visitor</p>
+      <h2>Want to play a planning game with Venkat?</h2>
+      <p>Match product lifecycle artifacts to the right stage and unlock the Product Strategist badge.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="../../index.html#planning-game" data-mission-start>Start game</a>
+        <button class="button secondary" type="button" data-mission-close>Maybe later</button>
+      </div>
+    </div>
+  </div>
+  <button class="jarvis-agent" type="button" data-chat-open aria-label="Open JARVIS AI helper"><span>J</span><strong>Ask JARVIS</strong></button>
+  <div class="chat-panel" data-chat hidden>
+    <div class="chat-card" role="dialog" aria-modal="true" aria-label="JARVIS portfolio assistant">
+      <div class="chat-head"><strong>JARVIS - Venkat's AI agent</strong><button type="button" data-chat-close>Close</button></div>
+      <div class="chat-log" data-chat-log>
+        <p><strong>JARVIS:</strong> Ask about Intelliflo IQ, product strategy, APIs, SAFe Agile, or why Venkat is a strong hire.</p>
+      </div>
+      <div class="chat-prompts">
+        <button type="button" data-chat-prompt="ai">Explain Intelliflo IQ</button>
+        <button type="button" data-chat-prompt="hire">Why hire Venkat?</button>
+        <button type="button" data-chat-prompt="api">Show architecture skills</button>
+      </div>
+      <form data-chat-form>
+        <label><span class="sr-only">Ask JARVIS</span><input data-chat-input placeholder="Ask JARVIS anything about Venkat"></label>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
   <script src="../../assets/js/main.js" defer></script>
