@@ -4,7 +4,9 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const siteUrl = "https://venkataprasadm.com";
 const author = "Venkata Prasad Muraharisetty";
-const email = "venkataprasadm@outlook.com";
+const email = "venkataprasadmcareer@outlook.com";
+const phone = "+91 8106884134";
+const location = "Hyderabad, India";
 const resumePdf = "assets/resume/Venkat_Prasad_Senior_Product_Owner_Resume.pdf";
 
 const ensure = (dir) => fs.mkdirSync(path.join(root, dir), { recursive: true });
@@ -44,13 +46,13 @@ const products = [
     title: "Intelliflo IQ",
     slug: "intelliflo-iq",
     label: "AI product capability",
-    problem: "Enterprise users needed faster ways to understand client, workflow, and practice insights without adding another reporting surface.",
-    need: "Bring AI-assisted intelligence into advisor workflows while keeping trust, explainability, governance, and adoption at the center.",
-    role: "Translated product opportunities into scoped capabilities, clarified success metrics, and partnered with technical teams on responsible AI delivery.",
-    architecture: "AI-assisted experience layered over governed product data, permissions, service APIs, telemetry, and feedback loops.",
-    technologies: ["AI products", "LLMs", "Product analytics", "APIs", "Cloud", "Observability"],
-    outcome: "Helped shape a premium intelligence experience aligned to enterprise SaaS expectations and wealth management controls.",
-    learnings: "AI features win when they are narrow, auditable, measurable, and integrated into a real decision or workflow."
+    problem: "Advisors were spending hours manually populating client and advice data across a large enterprise wealth platform.",
+    need: "Bring AI-powered assistance into advisor workflows while preserving trust, explainability, governance, and enterprise adoption controls.",
+    role: "Led Agile delivery for AI-powered Engagement and Advice Assistants, turning strategic objectives into MVP scope, epics, stories, acceptance criteria, and release-ready increments.",
+    architecture: "AI-assisted advisor experience layered over governed platform data, 190+ target fields, permissions, service APIs, telemetry, and feedback loops.",
+    technologies: ["AI products", "LLMs", "SAFe Agile", "Product analytics", "APIs", "Cloud", "Observability"],
+    outcome: "Automated data population across 190+ platform fields, reducing manual administrative effort from hours to minutes and improving advisor productivity.",
+    learnings: "AI products win when they are embedded in real workflow moments, measured with adoption signals, and delivered with quality gates that enterprise teams can trust."
   },
   {
     title: "Money Alive Integration",
@@ -61,7 +63,7 @@ const products = [
     role: "Managed business requirements, partner coordination, backlog refinement, integration scope, and release readiness.",
     architecture: "Partner-service integration connecting client context, secure launch points, engagement state, and CRM follow-up actions.",
     technologies: ["Partner APIs", "SSO", "CRM", "REST", "WealthTech", "Secure integrations"],
-    outcome: "Improved the path from client education to advisor action while preserving clean ownership between systems.",
+    outcome: "Improved the path from client education to advisor action and supported a 20% increase in active client engagement metrics for pilot advisory firms.",
     learnings: "External integrations need crisp contracts, fallback states, and shared definitions of completion and value."
   },
   {
@@ -618,8 +620,9 @@ function css() {
 [data-theme=light]{color-scheme:light;--bg:#f7fafc;--surface:#ffffff;--surface-2:#edf2f7;--text:#122033;--muted:#506176;--line:rgba(18,32,51,.14);--shadow:0 22px 55px rgba(38,53,78,.14)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 10% 0%,rgba(79,209,197,.16),transparent 34%),radial-gradient(circle at 90% 8%,rgba(139,92,246,.16),transparent 30%),var(--bg);color:var(--text);line-height:1.6}a{color:inherit}img{max-width:100%;height:auto}.skip-link{position:absolute;left:-999px;top:1rem;background:var(--brand);color:#07111f;padding:.7rem 1rem;z-index:20}.skip-link:focus{left:1rem}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.85rem clamp(1rem,4vw,3rem);backdrop-filter:blur(18px);background:color-mix(in srgb,var(--bg) 84%,transparent);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#07111f;font-weight:900}.brand small{display:block;color:var(--muted);font-size:.78rem}.site-nav{display:flex;align-items:center;gap:.25rem}.site-nav a{padding:.55rem .75rem;text-decoration:none;color:var(--muted);border-radius:8px;font-size:.94rem}.site-nav a:hover,.site-nav a:focus-visible{background:var(--surface-2);color:var(--text)}.theme-toggle,.nav-toggle{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:8px;min-width:42px;height:42px}.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:4px}.nav-toggle span{display:block;width:18px;height:2px;background:currentColor;margin:auto}.hero,.section,.page-hero,.article,.case-study{max-width:var(--max);margin:auto;padding:clamp(4rem,8vw,7rem) clamp(1rem,4vw,2rem)}.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:clamp(2rem,5vw,5rem);align-items:center;min-height:86vh}.eyebrow{margin:0 0 1rem;color:var(--brand);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em}.hero h1,.page-hero h1{font-size:clamp(2.75rem,7vw,6rem);line-height:.94;margin:.2rem 0 1.25rem;letter-spacing:0}.hero-lede,.page-hero p{font-size:clamp(1.08rem,2vw,1.35rem);color:var(--muted);max-width:760px}.hero-actions,.contact-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.75rem 1rem;border-radius:8px;text-decoration:none;font-weight:800;border:1px solid var(--line)}.button.primary{background:linear-gradient(135deg,var(--brand),#7dd3fc);color:#07111f;border:0}.button.secondary{background:var(--surface);color:var(--text)}.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:2rem 0 0}.hero-stats div,.signal-card,.content-card,.product-card,.post-card,.skill-card,.highlight-card{background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 92%,white 8%),var(--surface));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero-stats div{padding:1rem}.hero-stats dt{font-size:1.35rem;font-weight:900;color:var(--text)}.hero-stats dd{margin:0;color:var(--muted);font-size:.9rem}.hero-panel{display:grid;gap:1rem}.signal-card{padding:1.3rem}.signal-card span,.card-kicker,.meta{color:var(--muted);font-size:.86rem}.signal-card strong{display:block;font-size:1.55rem;line-height:1.15;margin:.45rem 0}.orbit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}.orbit-grid span{padding:1.1rem;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.045);font-weight:800;text-align:center}.split{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,5rem)}h2{font-size:clamp(1.85rem,4vw,3.2rem);line-height:1.05;margin:.1rem 0 1.25rem}h3{line-height:1.2}.content-stack p,.content-card p,.product-card p,.post-card p,.timeline p{color:var(--muted)}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:2rem}.section-heading h2{max-width:820px}.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.highlight-card,.product-card,.post-card,.skill-card,.content-card{padding:1.2rem}.product-card,.post-card{min-height:250px;display:flex;flex-direction:column}.text-link{margin-top:auto;color:var(--brand);font-weight:800;text-decoration:none}.timeline{position:relative;display:grid;gap:1rem}.timeline:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:1px;background:var(--line)}.timeline-item{position:relative;padding-left:2.5rem}.timeline-item span{position:absolute;left:3px;top:.35rem;width:15px;height:15px;border-radius:50%;background:var(--brand)}.muted{color:var(--muted)}.skill-columns{grid-template-columns:repeat(4,1fr)}.skill-card ul{padding-left:1.1rem;margin-bottom:0}.tech-radar{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem}.tag-cloud,.tag-row,.filter-bar{display:flex;gap:.55rem;flex-wrap:wrap}.tag-cloud span,.tag-row span,.filter-bar span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.45rem .7rem;color:var(--muted);font-size:.88rem}.cover-thumb,.cover-large{display:grid;place-items:end start;min-height:130px;border-radius:8px;background:linear-gradient(135deg,rgba(79,209,197,.82),rgba(139,92,246,.82)),linear-gradient(45deg,var(--surface),var(--surface-2));padding:1rem;color:#07111f;font-weight:900}.cover-large{min-height:260px;margin:1rem 0 1.5rem}.article{max-width:980px}.article-header h1{font-size:clamp(2.4rem,6vw,4.9rem);line-height:1;margin:.5rem 0 1rem}.article-body{font-size:1.08rem}.article-body h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-top:2.6rem}.article-body p,.article-body li{color:var(--muted)}blockquote{border-left:4px solid var(--brand);margin:2rem 0;padding:1rem 1.25rem;background:var(--surface);border-radius:0 8px 8px 0;font-weight:800}pre{overflow:auto;border:1px solid var(--line);border-radius:8px;background:#050b14;color:#d7f9ff;padding:1rem}.breadcrumbs{display:flex;gap:.5rem;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin-bottom:1rem}.breadcrumbs a{color:var(--brand);text-decoration:none}.related{margin-top:4rem}.case-grid{grid-template-columns:repeat(2,1fr)}.resume-viewer{padding-top:0}.resume-viewer object{display:block;width:100%;height:min(92vh,980px);border:1px solid var(--line);border-radius:8px;background:var(--surface)}.resume-layout{display:grid;grid-template-columns:330px 1fr;gap:2rem}.resume-sidebar,.resume-main{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.4rem}.contact-band{display:flex;justify-content:space-between;align-items:center;gap:2rem;background:linear-gradient(135deg,rgba(79,209,197,.12),rgba(139,92,246,.12));border:1px solid var(--line);border-radius:8px;margin-bottom:4rem}.site-footer{display:flex;justify-content:space-between;gap:2rem;padding:2rem clamp(1rem,4vw,3rem);border-top:1px solid var(--line);color:var(--muted)}.footer-links{display:flex;gap:1rem;flex-wrap:wrap}.footer-links a{color:var(--muted)}.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.is-visible{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.ai-console{padding:1.25rem;border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(79,209,197,.12),rgba(139,92,246,.08)),var(--surface);box-shadow:var(--shadow)}.console-topline{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}.console-topline span{color:var(--brand);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.12em}.console-topline strong{font-size:1.15rem}.ai-console p{min-height:5.5rem;color:var(--muted);font-size:1.05rem}.console-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin:1rem 0}.console-metrics span{padding:.8rem;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.045);color:var(--muted);font-size:.83rem}.console-metrics strong{display:block;color:var(--text);font-size:1.1rem}.console-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}.console-actions button{min-height:42px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--muted);font-weight:800}.console-actions button:hover,.console-actions button:focus-visible,.console-actions button.is-active{background:var(--brand);color:#07111f}.impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 @media (max-width:900px){.nav-toggle{display:flex}.site-nav{position:absolute;left:1rem;right:1rem;top:68px;display:none;flex-direction:column;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.5rem}.site-nav.is-open{display:flex}.hero,.split,.tech-radar,.resume-layout{grid-template-columns:1fr}.hero{min-height:auto;padding-top:4rem}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{grid-template-columns:1fr 1fr}.section-heading{display:block}.contact-band,.site-footer{display:block}.footer-links{margin-top:1rem}}
-@media (max-width:620px){.brand small{display:none}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{grid-template-columns:1fr}.hero h1,.page-hero h1{font-size:2.65rem}.section,.hero,.page-hero,.article,.case-study{padding-left:1rem;padding-right:1rem}.site-header{padding:.7rem 1rem}.orbit-grid{grid-template-columns:1fr}.cover-large{min-height:180px}}
+@media (max-width:620px){.brand small{display:none}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid,.console-metrics,.console-actions{grid-template-columns:1fr}.hero h1,.page-hero h1{font-size:2.65rem}.section,.hero,.page-hero,.article,.case-study{padding-left:1rem;padding-right:1rem}.site-header{padding:.7rem 1rem}.orbit-grid{grid-template-columns:1fr}.cover-large{min-height:180px}.ai-console p{min-height:auto}}
 @media print{.site-header,.site-footer,.theme-toggle,.nav-toggle,.hero-actions{display:none}.page-hero,.section{padding:1rem 0}body{background:#fff;color:#111}.resume-sidebar,.resume-main,.content-card{box-shadow:none}}
 `;
 }
@@ -679,6 +682,212 @@ Static GitHub Pages portfolio for a Senior Product Owner / Technical Product Man
 - \`sitemap.xml\`, \`robots.txt\`, \`rss.xml\` - SEO assets
 
 Run \`node scripts/generate-site.js\` to regenerate the static pages from structured content.`;
+}
+
+function homePage() {
+  const productCards = products.map((p) => `<article class="product-card reveal">
+    <div class="card-kicker">${p.label}</div>
+    <h3>${p.title}</h3>
+    <p>${p.problem}</p>
+    <a class="text-link" href="projects/${p.slug}/">Read case study</a>
+  </article>`).join("");
+  const blogCards = posts.slice(0, 6).map((p) => postCard(p, "")).join("");
+  const body = `
+  <section class="hero">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Senior Product Owner - AI Products - Enterprise SaaS - Wealth Management</p>
+      <h1>AI-centric product leadership for wealth management SaaS.</h1>
+      <p class="hero-lede">I turn regulated financial workflows, enterprise architecture, and advisor productivity pain into AI-powered product capabilities that teams can ship, measure, and trust.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#ai-impact">See AI impact</a>
+        <a class="button secondary" href="${resumePdf}">View resume</a>
+      </div>
+      <dl class="hero-stats" aria-label="Profile highlights">
+        <div><dt>8+</dt><dd>years in enterprise SaaS and financial services</dd></div>
+        <div><dt>5</dt><dd>years as Product Owner / Senior Product Owner</dd></div>
+        <div><dt>SAFe</dt><dd>PI planning, discovery, backlog, release confidence</dd></div>
+      </dl>
+    </div>
+    <div class="hero-panel reveal" aria-label="AI product leadership console">
+      <div class="ai-console" id="ai-impact">
+        <div class="console-topline"><span>AI product signal</span><strong>Intelliflo IQ</strong></div>
+        <p data-ai-output>Led AI-powered Engagement and Advice Assistants that automated data population across 190+ platform fields.</p>
+        <div class="console-metrics">
+          <span><strong>190+</strong> fields automated</span>
+          <span><strong>Hours</strong> to minutes</span>
+          <span><strong>40%</strong> fewer defect/rework loops</span>
+        </div>
+        <div class="console-actions" role="group" aria-label="AI product highlights">
+          <button type="button" class="is-active" data-ai-persona="advisor">Advisor value</button>
+          <button type="button" data-ai-persona="enterprise">Enterprise trust</button>
+          <button type="button" data-ai-persona="delivery">Delivery model</button>
+        </div>
+      </div>
+      <div class="orbit-grid" aria-hidden="true">
+        <span>AI Assistants</span><span>Product Strategy</span><span>APIs</span><span>SAFe</span><span>CRM</span><span>WealthTech</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section split">
+    <div>
+      <p class="eyebrow">About me</p>
+      <h2>Technical product manager with AI delivery and engineering depth.</h2>
+    </div>
+    <div class="content-stack">
+      <p>I am Venkata Prasad Muraharisetty, a Senior Product Owner based in ${location}, with 8+ years delivering enterprise SaaS products across wealth management, financial services, CRM, integrations, and AI-powered advisor workflows.</p>
+      <p>My background spans software engineering, product ownership, SAFe Agile delivery, API integrations, cloud platforms, microservices, and product discovery. I partner with Product Managers, Engineering, UX, Architecture, QA, and business stakeholders to translate strategy into scalable software outcomes.</p>
+    </div>
+  </section>
+
+  <section id="highlights" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Career highlights</p>
+      <h2>Proof points that make the story credible quickly.</h2>
+    </div>
+    <div class="highlight-grid">
+      ${["AI-powered Intelliflo IQ delivery with 190+ field automation", "Manual advisor admin reduced from hours to minutes", "40% reduction in post-release defects and rework loops", "20% increase in active client engagement for Money Alive pilot firms", "Nearly 5 years as Product Owner / Senior Product Owner in SAFe Agile", "Career progression across Intelliflo, Broadridge, and GTKonnect / EY"].map((x) => `<div class="highlight-card reveal">${x}</div>`).join("")}
+    </div>
+  </section>
+
+  <section id="experience" class="section split">
+    <div>
+      <p class="eyebrow">Experience</p>
+      <h2>Progression from engineering depth to product leadership.</h2>
+    </div>
+    <div class="timeline">
+      ${[
+        ["Intelliflo", "Senior Product Owner - Oct 2021 to Present", "Own and prioritize enterprise product backlogs across multiple Agile teams, lead PI planning and SAFe ceremonies, define epics, stories, MVP scope, acceptance criteria, and release-ready product increments for WealthTech SaaS."],
+        ["Broadridge Financial Solutions", "Senior Software Engineer - Apr 2020 to Oct 2021", "Developed ACATS account transfer capabilities and IBM MQ-based secure enterprise messaging for regulated wealth management platforms."],
+        ["GTKonnect, acquired by EY", "Associate Software Developer - Apr 2018 to Apr 2020", "Built Global Trade Management, CBP/ABI integrations, ISF and FTZ processing services, REST APIs, and microservices for international trade workflows."]
+      ].map(([company, role, desc]) => `<article class="timeline-item reveal"><span></span><h3>${company}</h3><p class="muted">${role}</p><p>${desc}</p></article>`).join("")}
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Featured product deliveries</p>
+      <h2>Case studies across enterprise SaaS, WealthTech, AI, CRM, and integrations.</h2>
+    </div>
+    <div class="product-grid">${productCards}</div>
+  </section>
+
+  <section id="skills" class="section skill-section">
+    <div class="section-heading">
+      <p class="eyebrow">Skills</p>
+      <h2>Product leadership with technical credibility.</h2>
+    </div>
+    <div class="skill-columns">
+      ${skillBlock("Product", ["Product strategy", "Roadmapping", "Product discovery", "Backlog management", "Feature prioritization", "User story mapping", "Acceptance criteria", "UAT"])}
+      ${skillBlock("Domain", ["Enterprise SaaS", "Wealth management", "Financial planning", "CRM", "Reporting", "Client review workflows"])}
+      ${skillBlock("Technical", ["REST APIs", "Microservices", "Azure", "AWS", "SQL Server", "C#", ".NET", "IBM MQ", "AI products"])}
+      ${skillBlock("Leadership", ["SAFe Agile", "Scrum", "PI planning", "Sprint planning", "Release planning", "Stakeholder management", "Cross-functional alignment"])}
+    </div>
+  </section>
+
+  <section class="section tech-radar">
+    <div>
+      <p class="eyebrow">Technology stack</p>
+      <h2>Comfortable in the architecture room and the roadmap room.</h2>
+    </div>
+    <div class="tag-cloud">
+      ${["Azure DevOps", "Jira", "Confluence", "Postman", "Splunk", "REST", "OpenAPI", "Microservices", "Azure", "AWS", "SQL Server", "C#", ".NET", "IBM MQ", "Microsoft Graph", "LLMs", "Product analytics", "Git"].map((x) => `<span>${x}</span>`).join("")}
+    </div>
+  </section>
+
+  <section id="education" class="section split">
+    <div>
+      <p class="eyebrow">Education</p>
+      <h2>Engineering foundation for product decisions.</h2>
+    </div>
+    <div class="content-card reveal">
+      <h3>B.Tech</h3>
+      <p>Bachelor of Technology, Godavari Institute of Engineering & Technology. CGPA: 9.1/10.</p>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Technical blog</p>
+      <h2>Writing on product management, WealthTech, SaaS architecture, AI, and career growth.</h2>
+      <a class="button secondary" href="blog/">Explore all posts</a>
+    </div>
+    <div class="blog-grid">${blogCards}</div>
+  </section>
+
+  <section id="contact" class="section contact-band">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk about AI product delivery, enterprise SaaS, or wealth management platforms.</h2>
+      <p>${location} - ${phone}. Best fit: Senior Product Owner, Technical Product Manager, AI Product Manager, or Enterprise SaaS Product roles.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="button primary" href="mailto:${email}">Email me</a>
+      <a class="button secondary" href="${resumePdf}">View resume</a>
+    </div>
+  </section>`;
+  return pageShell({
+    file: "index.html",
+    title: `${author} | AI Product Owner for Enterprise SaaS & Wealth Management`,
+    description: "Senior Product Owner and Technical Product Manager specializing in AI products, enterprise SaaS, wealth management, SAFe Agile delivery, APIs, CRM, and integrations.",
+    body,
+    jsonLd: [personSchema, breadcrumbSchema([{ name: "Home", url: siteUrl }])]
+  });
+}
+
+function resumePage() {
+  const body = `<section class="page-hero">
+    <p class="eyebrow">Resume showcase</p>
+    <h1>${author}</h1>
+    <p>Senior Product Owner specializing in AI-powered enterprise SaaS, wealth management, SAFe Agile delivery, product strategy, CRM, APIs, cloud platforms, microservices, and integrations.</p>
+    <div class="hero-actions"><a class="button primary" href="../${resumePdf}">Open PDF resume</a><a class="button secondary" href="../${resumePdf}" download>Download resume</a><a class="button secondary" href="mailto:${email}">Contact</a></div>
+  </section>
+  <section class="section resume-viewer" aria-label="Resume PDF preview">
+    <object data="../${resumePdf}" type="application/pdf">
+      <p>Your browser could not display the resume preview. <a href="../${resumePdf}">Open the PDF resume</a>.</p>
+    </object>
+  </section>
+  <section class="section resume-layout">
+    <aside class="resume-sidebar">
+      <h2>Profile</h2>
+      <p>8+ years across software engineering and product ownership, including nearly 5 years as Product Owner / Senior Product Owner delivering enterprise SaaS products in SAFe Agile environments.</p>
+      <h2>Core skills</h2>
+      <div class="tag-cloud compact">${["Product strategy", "Roadmapping", "Discovery", "Backlog", "Prioritization", "SAFe Agile", "PI planning", "REST APIs", "Microservices", "AI products", "CRM", "Azure", "AWS"].map((x) => `<span>${x}</span>`).join("")}</div>
+    </aside>
+    <div class="resume-main">
+      <h2>Experience</h2>
+      <article><h3>Intelliflo</h3><p class="muted">Senior Product Owner - Oct 2021 to Present</p><p>Led product delivery across AI-powered advisor capabilities, Outlook Integration, Money Alive Integration, Client Review workflows, CRM, financial planning, reporting, and enterprise integrations.</p></article>
+      <article><h3>Broadridge Financial Solutions</h3><p class="muted">Senior Software Engineer - Apr 2020 to Oct 2021</p><p>Delivered ACATS account transfer capabilities and secure IBM MQ-based integration patterns for regulated financial applications.</p></article>
+      <article><h3>GTKonnect, acquired by EY</h3><p class="muted">Associate Software Developer - Apr 2018 to Apr 2020</p><p>Built Global Trade Management capabilities, CBP/ABI integrations, ISF and FTZ processing services, REST APIs, and microservices.</p></article>
+      <h2>Selected product outcomes</h2>
+      <p>Intelliflo IQ automated 190+ platform fields and reduced advisor administrative effort from hours to minutes. Money Alive supported a 20% increase in active client engagement metrics for pilot advisory firms. Improved story quality and Definition of Done practices supported a 40% reduction in post-release defects and rework loops.</p>
+    </div>
+  </section>`;
+  return pageShell({
+    file: "resume/index.html",
+    title: `Resume | ${author}`,
+    description: "Resume showcase for Venkata Prasad Muraharisetty, Senior Product Owner and AI-focused Technical Product Manager in enterprise SaaS and wealth management.",
+    body,
+    canonical: absolute("resume/"),
+    jsonLd: [personSchema, breadcrumbSchema([{ name: "Home", url: siteUrl }, { name: "Resume", url: absolute("resume/") }])]
+  });
+}
+
+function js() {
+  return `
+const root=document.documentElement;
+const saved=localStorage.getItem("theme");
+if(saved){root.dataset.theme=saved}else if(matchMedia("(prefers-color-scheme: light)").matches){root.dataset.theme="light"}
+document.querySelector("[data-theme-toggle]")?.addEventListener("click",()=>{const next=root.dataset.theme==="dark"?"light":"dark";root.dataset.theme=next;localStorage.setItem("theme",next)});
+const nav=document.querySelector("[data-nav]");
+document.querySelector("[data-nav-toggle]")?.addEventListener("click",(event)=>{const open=nav.classList.toggle("is-open");event.currentTarget.setAttribute("aria-expanded",String(open))});
+nav?.addEventListener("click",(event)=>{if(event.target.matches("a")){nav.classList.remove("is-open");document.querySelector("[data-nav-toggle]")?.setAttribute("aria-expanded","false")}});
+const aiCopy={advisor:"Advisor value: AI assistance reduces repetitive data entry and turns advisor effort toward client conversations, review prep, and advice quality.",enterprise:"Enterprise trust: AI capability is framed around permissions, data governance, measurable adoption, telemetry, and release confidence.",delivery:"Delivery model: MVP scope, epics, user stories, acceptance criteria, DoD discipline, and SAFe ceremonies connect strategy to working software."};
+const aiOutput=document.querySelector("[data-ai-output]");
+document.querySelectorAll("[data-ai-persona]").forEach((button)=>button.addEventListener("click",()=>{document.querySelectorAll("[data-ai-persona]").forEach((item)=>item.classList.remove("is-active"));button.classList.add("is-active");if(aiOutput){aiOutput.textContent=aiCopy[button.dataset.aiPersona]}}));
+const observer=new IntersectionObserver((entries)=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target)}}},{threshold:.1});
+document.querySelectorAll(".reveal").forEach((el)=>observer.observe(el));
+`;
 }
 
 function main() {
