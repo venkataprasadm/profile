@@ -7,7 +7,7 @@ const author = "Venkata Prasad Muraharisetty";
 const email = "venkataprasadmcareer@outlook.com";
 const phone = "+91 8106884134";
 const location = "Hyderabad, India";
-const resumePdf = "assets/resume/Venkat_Prasad_Senior_Product_Owner_Resume.pdf";
+const resumePdf = "assets/resume/Venkat_Prasad_Technical_DotNet_Resume.pdf";
 
 const ensure = (dir) => fs.mkdirSync(path.join(root, dir), { recursive: true });
 const write = (file, body) => {
@@ -22,7 +22,7 @@ const absolute = (url) => `${siteUrl}/${url.replace(/^\/+/, "")}`;
 const nav = [
   ["About", "/#about"],
   ["Experience", "/#experience"],
-  ["Products", "/#products"],
+  ["Projects", "/#products"],
   ["Skills", "/#skills"],
   ["Blog", "/blog/"],
   ["Jira Resume", "/jira-resume/index.html"],
@@ -37,9 +37,9 @@ const products = [
     label: "Advisor productivity",
     problem: "Advisors were managing client communication in Outlook while CRM activity, follow-ups, and compliance context lived in a separate enterprise workflow.",
     need: "Reduce context switching, improve activity capture, and make client communication traceable inside the wealth management operating model.",
-    role: "Owned discovery, backlog shaping, stakeholder alignment, and delivery trade-offs across product, engineering, QA, support, and client-facing teams.",
-    architecture: "API-led integration between Microsoft 365, CRM services, authentication, activity capture, and audit-friendly synchronization flows.",
-    technologies: ["Microsoft Graph", "REST APIs", "OAuth", "CRM", "Event-driven sync", "Azure"],
+    role: "Developed .NET backend APIs and integration logic connecting Outlook communication workflows with the adviser platform. Implemented data mapping, validation and error handling, and supported integration testing and release delivery.",
+    architecture: "Backend API integration connecting external communication data with client records and application workflows, with validation and error handling at integration boundaries.",
+    technologies: ["C#", ".NET", "REST APIs", "Data mapping", "Validation", "Integration testing"],
     outcome: "Created a cleaner advisor workflow that linked daily communication to client records and improved confidence in captured engagement history.",
     learnings: "Product value came from workflow fit as much as integration depth; reliability, permissions, and clear error recovery mattered most."
   },
@@ -49,10 +49,10 @@ const products = [
     label: "AI product capability",
     problem: "Advisors were spending hours manually populating client and advice data across a large enterprise wealth platform.",
     need: "Bring AI-powered assistance into advisor workflows while preserving trust, explainability, governance, and enterprise adoption controls.",
-    role: "Led Agile delivery for AI-powered Engagement and Advice Assistants, turning strategic objectives into MVP scope, epics, stories, acceptance criteria, and release-ready increments.",
-    architecture: "AI-assisted advisor experience layered over governed platform data, 190+ target fields, permissions, service APIs, telemetry, and feedback loops.",
-    technologies: ["AI products", "LLMs", "SAFe Agile", "Product analytics", "APIs", "Cloud", "Observability"],
-    outcome: "Automated data population across 190+ platform fields, reducing manual administrative effort from hours to minutes and improving advisor productivity.",
+    role: "Developed C#/.NET backend functionality for AI-enabled adviser workflows, including data mapping, business rules, validation and automated field population. Worked with engineering and QA on integration verification, alongside backlog and acceptance-criteria responsibilities.",
+    architecture: "Adviser workflows connected to backend services and platform data, with mapping and validation supporting automated population of 190+ target fields.",
+    technologies: ["C#", ".NET", "Backend services", "APIs", "Data validation", "Integration testing"],
+    outcome: "Supported automated data population across 190+ platform fields within adviser workflows.",
     learnings: "AI products win when they are embedded in real workflow moments, measured with adoption signals, and delivered with quality gates that enterprise teams can trust."
   },
   {
@@ -61,10 +61,10 @@ const products = [
     label: "Financial education",
     problem: "Firms needed a smoother way to connect financial education journeys with client engagement and advice workflows.",
     need: "Integrate education content into the client lifecycle so advisors could support informed decisions with less operational friction.",
-    role: "Managed business requirements, partner coordination, backlog refinement, integration scope, and release readiness.",
-    architecture: "Partner-service integration connecting client context, secure launch points, engagement state, and CRM follow-up actions.",
-    technologies: ["Partner APIs", "SSO", "CRM", "REST", "WealthTech", "Secure integrations"],
-    outcome: "Improved the path from client education to advisor action and supported a 20% increase in active client engagement metrics for pilot advisory firms.",
+    role: "Developed backend integration functionality for Money Alive financial-education capabilities. Implemented partner API integration, data mapping, validation and application business logic; supported end-to-end testing and release verification.",
+    architecture: "Partner APIs connected to client and adviser workflows through .NET integration logic, with mapped data, validation and error handling.",
+    technologies: ["C#", ".NET", "Partner APIs", "REST", "Data mapping", "Validation"],
+    outcome: "Connected financial-education functionality with existing client and adviser application workflows.",
     learnings: "External integrations need crisp contracts, fallback states, and shared definitions of completion and value."
   },
   {
@@ -73,9 +73,9 @@ const products = [
     label: "Advice workflow",
     problem: "Client review preparation required advisors to assemble information across CRM, planning, reporting, and communication tools.",
     need: "Create a structured workflow for preparing, conducting, and following up on recurring client review meetings.",
-    role: "Drove product discovery, workflow mapping, prioritization, release sequencing, and stakeholder communication.",
-    architecture: "Workflow capability spanning client data, task orchestration, document context, review notes, and post-meeting actions.",
-    technologies: ["Workflow design", "CRM", "APIs", "Reporting", "Agile delivery", "Product discovery"],
+    role: "Developed backend functionality covering client-data processing, business rules and review workflow validations. Translated functional requirements into .NET application behavior and supported testing, defect resolution, UAT and release delivery.",
+    architecture: "Application services and SQL-based data access connecting client information with validated review workflows and backend business rules.",
+    technologies: ["C#", ".NET", "SQL Server", "Backend services", "Business rules", "Workflow validation"],
     outcome: "Reduced manual preparation effort and improved consistency across client service journeys.",
     learnings: "The best workflow products respect how professionals already think, then remove the operational drag around that work."
   },
@@ -85,9 +85,9 @@ const products = [
     label: "Core advice capability",
     problem: "Planning workflows needed to connect fact find data, assumptions, advice models, and client-facing outputs more coherently.",
     need: "Support advisors with reliable planning journeys that make data capture, scenario thinking, and recommendations easier to manage.",
-    role: "Balanced roadmap priorities, regulated-domain constraints, engineering complexity, and advisor experience across releases.",
+    role: "Developed application functionality and backend business rules for financial planning and advice workflows, collaborating with architects and QA on requirements, integration validation and release delivery. Also supported backlog priorities and acceptance criteria.",
     architecture: "Domain-led planning services connected to client profiles, calculations, validations, documents, and reporting.",
-    technologies: ["Financial planning", "Domain modeling", "Microservices", "REST APIs", "Data validation", "Cloud"],
+    technologies: ["C#", ".NET", "SQL Server", "REST APIs", "Data validation", "Financial planning"],
     outcome: "Strengthened a business-critical advice workflow and improved product clarity across planning-adjacent features.",
     learnings: "Financial planning demands precise domain language, careful edge-case handling, and excellent change communication."
   },
@@ -97,9 +97,9 @@ const products = [
     label: "Enterprise CRM",
     problem: "Advisory firms needed CRM workflows that could reflect different operating models without fragmenting the product experience.",
     need: "Improve client, household, activity, task, and relationship management across enterprise use cases.",
-    role: "Owned backlog definition, discovery synthesis, user story quality, acceptance criteria, and dependency management.",
-    architecture: "Configurable CRM capabilities built on shared client domain services, permissions, integrations, and analytics signals.",
-    technologies: ["CRM", "SaaS configuration", "REST", "Role-based access", "Product metrics", "Agile"],
+    role: "Implemented application functionality, backend business rules and data-processing logic for adviser CRM workflows. Worked with QA on workflow validation and defect resolution while maintaining user stories and acceptance criteria as additional product ownership responsibilities.",
+    architecture: "CRM workflows connected to shared application services, client data, API integrations and SQL-based data access.",
+    technologies: ["C#", ".NET", "SQL Server", "REST APIs", "CRM", "Integration testing"],
     outcome: "Delivered practical workflow improvements while protecting platform consistency and long-term maintainability.",
     learnings: "Enterprise configurability must be designed with boundaries; every option creates support and analytics consequences."
   },
@@ -109,9 +109,9 @@ const products = [
     label: "Account transfers",
     problem: "Account transfer journeys are operationally sensitive, exception-heavy, and dependent on reliable status visibility.",
     need: "Improve transfer workflow clarity for users managing brokerage-account movement and related operational events.",
-    role: "Converted business process complexity into product flows, acceptance criteria, integration scenarios, and release plans.",
-    architecture: "Transfer workflow connected to account data, status events, operational queues, audit trails, and integration touchpoints.",
-    technologies: ["Financial services", "Event workflows", "APIs", "Operations", "Auditability", "Reporting"],
+    role: "Developed .NET backend services supporting brokerage account transfers at Broadridge. Implemented standardized financial messages containing customer positions and transfer information, validation and IBM MQ integrations; supported troubleshooting and production releases.",
+    architecture: "C#/.NET backend processing connected to central transfer-processing systems through IBM MQ-based asynchronous financial message exchange.",
+    technologies: ["C#", ".NET", "IBM MQ", "Financial messaging", "Backend services", "Validation"],
     outcome: "Supported more transparent account-transfer handling with clearer process states and operational follow-up.",
     learnings: "Status modeling is the product; users need to know what happened, what is blocked, and what action comes next."
   },
@@ -121,11 +121,11 @@ const products = [
     label: "Enterprise integration",
     problem: "Trade workflows required dependable integration across enterprise systems, message queues, and operational data flows.",
     need: "Deliver scalable integration behavior for global trade processes while reducing manual intervention and ambiguity.",
-    role: "Contributed as an engineer and later used that architecture background to shape product decisions with technical depth.",
-    architecture: "Enterprise integration patterns using IBM MQ, service boundaries, data transformation, monitoring, and exception handling.",
-    technologies: ["IBM MQ", "Global trade", "Enterprise integrations", "SQL", "Services", "Monitoring"],
-    outcome: "Built a strong foundation in complex enterprise delivery that now informs technical product management decisions.",
-    learnings: "The product manager with architecture fluency can ask better questions earlier and reduce delivery risk."
+    role: "Developed ASP.NET/C# functionality for global trade and paperless entry workflows at GTKonnect. Implemented entry-file uploads, validation, automated entry creation and transmission, FTP/SFTP processing and responsive load-monitoring screens.",
+    architecture: "File-driven application workflows using ASP.NET/C#, SQL data access through ADO.NET, XML data exchange and React/Angular user interfaces.",
+    technologies: ["C#", "ASP.NET", "SQL Server", "ADO.NET", "XML", "React", "Angular", "FTP/SFTP"],
+    outcome: "Delivered application functionality for paperless entry processing and operational visibility into data loads.",
+    learnings: "File validation, explicit processing states and useful error feedback are essential to dependable trade applications."
   }
 ];
 
@@ -220,7 +220,7 @@ function pageShell({ file = "index.html", title, description, body, canonical, t
   ${schemas.map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`).join("\n  ")}
 </head>
 <body>
-  <div class="jarvis-loader" data-jarvis-loader>
+  <div class="jarvis-loader" data-jarvis-loader hidden>
     <div class="jarvis-core" aria-hidden="true"><span></span><span></span><span></span></div>
     <p class="eyebrow">JARVIS Product OS</p>
     <h1>Buckle up, recruiter.</h1>
@@ -266,7 +266,7 @@ function pageShell({ file = "index.html", title, description, body, canonical, t
   <footer class="site-footer">
     <div>
       <strong>${author}</strong>
-      <p>Senior Product Owner for enterprise SaaS, wealth management, AI products, and technically complex delivery.</p>
+      <p>Hands-on C#/.NET developer. Senior Product Owner at intelliflo. Enterprise applications, APIs and integrations.</p>
     </div>
     <div class="footer-links">
       <a href="mailto:${email}">${email}</a>
@@ -298,7 +298,7 @@ function pageShell({ file = "index.html", title, description, body, canonical, t
     <div class="chat-card" role="dialog" aria-modal="true" aria-label="JARVIS portfolio assistant">
       <div class="chat-head"><strong>JARVIS - Venkat's AI agent</strong><button type="button" data-chat-close>Close</button></div>
       <div class="chat-log" data-chat-log>
-        <p><strong>JARVIS:</strong> Ask about Intelliflo IQ, product strategy, APIs, SAFe Agile, or why Venkat is a strong hire.</p>
+        <p><strong>JARVIS:</strong> Ask about C#/.NET development, APIs, integrations, Intelliflo IQ or product ownership.</p>
       </div>
       <div class="chat-prompts">
         <button type="button" data-chat-prompt="ai">Explain Intelliflo IQ</button>
@@ -323,7 +323,8 @@ const personSchema = {
   jobTitle: "Senior Product Owner",
   email,
   url: siteUrl,
-  knowsAbout: ["Enterprise SaaS", "Wealth Management", "Technical Product Management", "AI Products", "REST APIs", "Microservices", "Product Strategy"],
+  knowsAbout: ["C#", ".NET", "ASP.NET Core", "SQL Server", "REST APIs", "Microservices", "Enterprise integrations", "Product Ownership"],
+  sameAs: ["https://github.com/venkataprasadm", "https://www.linkedin.com/in/venkat-muarahari/"],
   worksFor: { "@type": "Organization", name: "Intelliflo" }
 };
 
@@ -692,6 +693,22 @@ function css() {
 @media (max-width:900px){.nav-toggle{display:flex}.site-nav{position:absolute;left:1rem;right:1rem;top:68px;display:none;flex-direction:column;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.5rem}.site-nav.is-open{display:flex}.hero,.split,.tech-radar,.resume-layout,.quest-board,.match-game,.jira-summary,.retro-grid{grid-template-columns:1fr}.jira-controls{display:grid}.hero{min-height:auto;padding-top:4rem}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid{grid-template-columns:1fr 1fr}.section-heading{display:block}.contact-band,.site-footer{display:block}.footer-links{margin-top:1rem}.game-hud{top:auto;bottom:4.8rem}.jarvis-agent strong{display:none}}
 @media (max-width:620px){.brand small{display:none}.hero-stats,.highlight-grid,.product-grid,.blog-grid,.skill-columns,.case-grid,.console-metrics,.console-actions{grid-template-columns:1fr}.hero h1,.page-hero h1{font-size:2.65rem}.section,.hero,.page-hero,.article,.case-study{padding-left:1rem;padding-right:1rem}.site-header{padding:.7rem 1rem}.orbit-grid{grid-template-columns:1fr}.cover-large{min-height:180px}.ai-console p{min-height:auto}.jira-board{grid-template-columns:repeat(4,82vw)}.jira-search input{width:100%}}
 @media print{.site-header,.site-footer,.theme-toggle,.nav-toggle,.hero-actions{display:none}.page-hero,.section{padding:1rem 0}body{background:#fff;color:#111}.resume-sidebar,.resume-main,.content-card{box-shadow:none}}
+:root{--bg:#151719;--surface:#202426;--surface-2:#2a3032;--text:#f2f6f5;--muted:#bac6c5;--brand:#69ddc3;--brand-2:#e9a7bf}
+body{background:var(--bg)}.eyebrow,.site-nav a,.tag-cloud span{letter-spacing:0}
+.hero h1,.page-hero h1{font-size:3rem;line-height:1.12;overflow-wrap:anywhere}
+.hero-lede,.page-hero p{font-size:1.125rem}.section h2,.article h2{font-size:1.75rem;letter-spacing:0}
+main{display:flex;flex-direction:column}main>*{width:100%}#quest,#planning-game{order:2}
+.hero{min-height:calc(100svh - 160px);padding-top:3rem;padding-bottom:3rem}
+.hero-stats div{background:none;border:0;border-top:1px solid var(--line);box-shadow:none;border-radius:0;padding:.8rem 0}
+.hero-copy,.hero-panel,.skill-columns>*{min-width:0}.hero-actions .button{font-size:.9rem}
+.contact-actions{max-width:100%;min-width:0}.contact-actions .button{overflow-wrap:anywhere}
+.console-topline strong{font-size:1.25rem}.hero-panel .ai-console{box-shadow:none}
+.hero{grid-template-columns:1fr}.hero-copy{max-width:850px}.game-hud{display:none}.jarvis-loader[hidden]{display:none}
+.engineering-band{padding-top:2rem;padding-bottom:2rem}.engineering-band .hero-panel{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center}
+@media(max-width:900px){.engineering-band .hero-panel{grid-template-columns:1fr}}
+@media(max-width:620px){.hero-lede{font-size:1rem}.engineering-band{padding-top:1rem}.engineering-band .orbit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.engineering-band .orbit-grid span{padding:.6rem}}
+[data-theme=light]{--bg:#f5f7f7;--surface:#fff;--surface-2:#edf2f1;--text:#202626;--muted:#526361;--brand:#116c5a;--brand-2:#9f4764}
+@media(max-width:620px){.hero h1,.page-hero h1{font-size:2rem}.hero{min-height:0;padding-top:2rem;padding-bottom:2rem}.hero-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-stats dt{font-size:1.2rem}.hero-stats dd{font-size:.8rem}.hero-panel{margin-top:0}.section h2,.article h2{font-size:1.5rem}}
 `;
 }
 
@@ -765,28 +782,30 @@ function homePage() {
   <section class="hero">
     <canvas class="neural-canvas" data-neural-canvas aria-hidden="true"></canvas>
     <div class="hero-copy reveal">
-      <p class="eyebrow">Senior Product Owner - AI Products - Enterprise SaaS - Wealth Management</p>
-      <h1>AI-centric product leadership for wealth management SaaS.</h1>
-      <p class="hero-lede">I turn regulated financial workflows, enterprise architecture, and advisor productivity pain into AI-powered product capabilities that teams can ship, measure, and trust.</p>
+      <p class="eyebrow">Hands-on .NET Developer | Senior Product Owner</p>
+      <h1>Venkata Prasad<br>Muraharisetty</h1>
+      <p class="hero-lede">I build C#/.NET applications, ASP.NET Core services, REST APIs and SQL Server workflows. Development is my primary responsibility; product ownership complements delivery.</p>
       <div class="hero-actions">
-        <a class="button primary" href="#ai-impact">See AI impact</a>
+        <a class="button primary" href="#products">Explore engineering projects</a>
         <a class="button secondary" href="jira-resume/index.html">Switch to Jira Resume</a>
         <a class="button secondary" href="${resumePdf}">View resume</a>
       </div>
       <dl class="hero-stats" aria-label="Profile highlights">
         <div><dt>8+</dt><dd>years in enterprise SaaS and financial services</dd></div>
-        <div><dt>5</dt><dd>years as Product Owner / Senior Product Owner</dd></div>
-        <div><dt>SAFe</dt><dd>PI planning, discovery, backlog, release confidence</dd></div>
+        <div><dt>.NET</dt><dd>applications, backend services and API integrations</dd></div>
+        <div><dt>SQL</dt><dd>data access, validation and business rules</dd></div>
       </dl>
     </div>
-    <div class="hero-panel reveal" aria-label="AI product leadership console">
+  </section>
+  <section class="section engineering-band">
+    <div class="hero-panel reveal" aria-label="Engineering project highlights">
       <div class="ai-console" id="ai-impact">
-        <div class="console-topline"><span>AI product signal</span><strong>Intelliflo IQ</strong></div>
-        <p data-ai-output>Led AI-powered Engagement and Advice Assistants that automated data population across 190+ platform fields.</p>
+        <div class="console-topline"><span>Selected engineering work</span><strong>Intelliflo IQ</strong></div>
+        <p data-ai-output>Developed backend workflow functionality, data mapping and validation supporting automated population of 190+ platform fields.</p>
         <div class="console-metrics">
           <span><strong>190+</strong> fields automated</span>
-          <span><strong>Hours</strong> to minutes</span>
-          <span><strong>40%</strong> fewer defect/rework loops</span>
+          <span><strong>C#</strong> backend functionality</span>
+          <span><strong>APIs</strong> workflow integration</span>
         </div>
         <div class="console-actions" role="group" aria-label="AI product highlights">
           <button type="button" class="is-active" data-ai-persona="advisor">Advisor value</button>
@@ -795,7 +814,7 @@ function homePage() {
         </div>
       </div>
       <div class="orbit-grid" aria-hidden="true">
-        <span>AI Assistants</span><span>Product Strategy</span><span>APIs</span><span>SAFe</span><span>CRM</span><span>WealthTech</span>
+        <span>C# / .NET</span><span>ASP.NET Core</span><span>REST APIs</span><span>SQL Server</span><span>Integrations</span><span>WealthTech</span>
       </div>
     </div>
   </section>
@@ -861,11 +880,11 @@ function homePage() {
   <section id="about" class="section split">
     <div>
       <p class="eyebrow">About me</p>
-      <h2>Technical product manager with AI delivery and engineering depth.</h2>
+      <h2>Software development first. Product ownership alongside.</h2>
     </div>
     <div class="content-stack">
-      <p>I am Venkata Prasad Muraharisetty, a Senior Product Owner based in ${location}, with 8+ years delivering enterprise SaaS products across wealth management, financial services, CRM, integrations, and AI-powered advisor workflows.</p>
-      <p>My background spans software engineering, product ownership, SAFe Agile delivery, API integrations, cloud platforms, microservices, and product discovery. I partner with Product Managers, Engineering, UX, Architecture, QA, and business stakeholders to translate strategy into scalable software outcomes.</p>
+      <p>I am Venkata Prasad Muraharisetty, based in ${location}, with 8+ years building enterprise software across wealth management, financial services, brokerage and global trade. My current title is Senior Product Owner at intelliflo, where hands-on application development is my primary responsibility.</p>
+      <p>I implement backend services, API integrations, SQL data access, business rules and user-facing workflows. I work with architects and QA from technical design through integration testing, troubleshooting and production delivery. Alongside development, I own backlog priorities, user stories, acceptance criteria, sprint planning and UAT.</p>
     </div>
   </section>
 
@@ -875,18 +894,18 @@ function homePage() {
       <h2>Proof points that make the story credible quickly.</h2>
     </div>
     <div class="highlight-grid">
-      ${["AI-powered Intelliflo IQ delivery with 190+ field automation", "Manual advisor admin reduced from hours to minutes", "40% reduction in post-release defects and rework loops", "20% increase in active client engagement for Money Alive pilot firms", "Nearly 5 years as Product Owner / Senior Product Owner in SAFe Agile", "Career progression across Intelliflo, Broadridge, and GTKonnect / EY"].map((x) => `<div class="highlight-card reveal">${x}</div>`).join("")}
+      ${["C#/.NET enterprise application development", "Intelliflo IQ workflows supporting 190+ platform fields", "Outlook and Money Alive backend API integrations", "ACATS financial messaging with IBM MQ", "ASP.NET, SQL and FTP/SFTP trade-processing workflows", "Hands-on development with additional product ownership"].map((x) => `<div class="highlight-card reveal">${x}</div>`).join("")}
     </div>
   </section>
 
   <section id="experience" class="section split">
     <div>
       <p class="eyebrow">Experience</p>
-      <h2>Progression from engineering depth to product leadership.</h2>
+      <h2>Building applications across enterprise domains.</h2>
     </div>
     <div class="timeline">
       ${[
-        ["Intelliflo", "Senior Product Owner - Oct 2021 to Present", "Own and prioritize enterprise product backlogs across multiple Agile teams, lead PI planning and SAFe ceremonies, define epics, stories, MVP scope, acceptance criteria, and release-ready product increments for WealthTech SaaS."],
+        ["Intelliflo", "Senior Product Owner - Oct 2021 to Present", "Develop C#/.NET application functionality, ASP.NET Core services, REST APIs and SQL Server data access for adviser workflows. Engineering work includes Intelliflo IQ, Outlook and Money Alive integrations, Client Review, CRM, Fact Find, financial planning and reporting. Support testing, troubleshooting and releases; also own backlog priorities, acceptance criteria, sprint planning and UAT."],
         ["Broadridge Financial Solutions", "Senior Software Engineer - Apr 2020 to Oct 2021", "Developed ACATS account transfer capabilities and IBM MQ-based secure enterprise messaging for regulated wealth management platforms."],
         ["GTKonnect, acquired by EY", "Associate Software Developer - Apr 2018 to Apr 2020", "Built Global Trade Management, CBP/ABI integrations, ISF and FTZ processing services, REST APIs, and microservices for international trade workflows."]
       ].map(([company, role, desc]) => `<article class="timeline-item reveal"><span></span><h3>${company}</h3><p class="muted">${role}</p><p>${desc}</p></article>`).join("")}
@@ -895,8 +914,8 @@ function homePage() {
 
   <section id="products" class="section">
     <div class="section-heading">
-      <p class="eyebrow">Featured product deliveries</p>
-      <h2>Case studies across enterprise SaaS, WealthTech, AI, CRM, and integrations.</h2>
+      <p class="eyebrow">Engineering projects</p>
+      <h2>Applications, backend services and integrations.</h2>
     </div>
     <div class="product-grid">${productCards}</div>
   </section>
@@ -904,23 +923,23 @@ function homePage() {
   <section id="skills" class="section skill-section">
     <div class="section-heading">
       <p class="eyebrow">Skills</p>
-      <h2>Product leadership with technical credibility.</h2>
+      <h2>From implementation to production support.</h2>
     </div>
     <div class="skill-columns">
-      ${skillBlock("Product", ["Product strategy", "Roadmapping", "Product discovery", "Backlog management", "Feature prioritization", "User story mapping", "Acceptance criteria", "UAT"])}
-      ${skillBlock("Domain", ["Enterprise SaaS", "Wealth management", "Financial planning", "CRM", "Reporting", "Client review workflows"])}
-      ${skillBlock("Technical", ["REST APIs", "Microservices", "Azure", "AWS", "SQL Server", "C#", ".NET", "IBM MQ", "AI products"])}
-      ${skillBlock("Leadership", ["SAFe Agile", "Scrum", "PI planning", "Sprint planning", "Release planning", "Stakeholder management", "Cross-functional alignment"])}
+      ${skillBlock("Application development", ["C#", ".NET / .NET Core", "ASP.NET Core / MVC", "Web API / REST APIs", "Microservices", "Angular", "React"])}
+      ${skillBlock("Data and integrations", ["SQL Server / Azure SQL", "Entity Framework / EF Core", "ADO.NET / Dapper", "Redis / MongoDB", "IBM MQ / RabbitMQ", "Third-party APIs", "Data mapping and validation"])}
+      ${skillBlock("Delivery and diagnostics", ["Azure / AWS", "Git / Azure DevOps", "GitHub Actions", "Docker / Kubernetes", "Postman", "Splunk / Serilog / Seq", "Integration testing", "Production support"])}
+      ${skillBlock("Product ownership", ["Backlog priorities", "User stories", "Acceptance criteria", "Sprint planning", "SAFe / Scrum", "UAT", "Stakeholder collaboration"])}
     </div>
   </section>
 
   <section class="section tech-radar">
     <div>
       <p class="eyebrow">Technology stack</p>
-      <h2>Comfortable in the architecture room and the roadmap room.</h2>
+      <h2>A practical enterprise development toolkit.</h2>
     </div>
     <div class="tag-cloud">
-      ${["Azure DevOps", "Jira", "Confluence", "Postman", "Splunk", "REST", "OpenAPI", "Microservices", "Azure", "AWS", "SQL Server", "C#", ".NET", "IBM MQ", "Microsoft Graph", "LLMs", "Product analytics", "Git"].map((x) => `<span>${x}</span>`).join("")}
+      ${["C#", ".NET Core", "ASP.NET Core", "REST APIs", "SQL Server", "EF Core", "Dapper", "Angular", "React", "IBM MQ", "RabbitMQ", "Azure DevOps", "Git", "Docker", "Postman", "Splunk", "Azure", "AWS"].map((x) => `<span>${x}</span>`).join("")}
     </div>
   </section>
 
@@ -947,18 +966,20 @@ function homePage() {
   <section id="contact" class="section contact-band">
     <div>
       <p class="eyebrow">Contact</p>
-      <h2>Let's talk about AI product delivery, enterprise SaaS, or wealth management platforms.</h2>
-      <p>${location} - ${phone}. Best fit: Senior Product Owner, Technical Product Manager, AI Product Manager, or Enterprise SaaS Product roles.</p>
+      <h2>Let's talk about .NET applications, APIs and enterprise integrations.</h2>
+      <p>${location} - ${phone}. Focus: Senior .NET Developer, Senior Software Engineer, backend development and technical product ownership.</p>
     </div>
     <div class="contact-actions">
       <a class="button primary" href="mailto:${email}">Email me</a>
       <a class="button secondary" href="${resumePdf}">View resume</a>
+      <a class="button secondary" href="https://github.com/venkataprasadm">GitHub</a>
+      <a class="button secondary" href="https://www.linkedin.com/in/venkat-muarahari/">LinkedIn</a>
     </div>
   </section>`;
   return pageShell({
     file: "index.html",
-    title: `${author} | AI Product Owner for Enterprise SaaS & Wealth Management`,
-    description: "Senior Product Owner and Technical Product Manager specializing in AI products, enterprise SaaS, wealth management, SAFe Agile delivery, APIs, CRM, and integrations.",
+    title: `${author} | C# / .NET Developer | Senior Product Owner`,
+    description: "Hands-on C#/.NET developer with 8+ years building enterprise applications, ASP.NET Core services, REST APIs, SQL Server workflows and integrations. Senior Product Owner at intelliflo.",
     body,
     jsonLd: [personSchema, breadcrumbSchema([{ name: "Home", url: siteUrl }])]
   });
@@ -968,7 +989,7 @@ function resumePage() {
   const body = `<section class="page-hero">
     <p class="eyebrow">Resume showcase</p>
     <h1>${author}</h1>
-    <p>Senior Product Owner specializing in AI-powered enterprise SaaS, wealth management, SAFe Agile delivery, product strategy, CRM, APIs, cloud platforms, microservices, and integrations.</p>
+    <p>Hands-on C#/.NET developer building enterprise applications, backend services, REST APIs, SQL data access and third-party integrations. Current role: Senior Product Owner, with development as the primary responsibility.</p>
     <div class="hero-actions"><a class="button primary" href="../${resumePdf}">Open PDF resume</a><a class="button secondary" href="../${resumePdf}" download>Download resume</a><a class="button secondary" href="mailto:${email}">Contact</a></div>
   </section>
   <section class="section resume-viewer" aria-label="Resume PDF preview">
@@ -979,23 +1000,23 @@ function resumePage() {
   <section class="section resume-layout">
     <aside class="resume-sidebar">
       <h2>Profile</h2>
-      <p>8+ years across software engineering and product ownership, including nearly 5 years as Product Owner / Senior Product Owner delivering enterprise SaaS products in SAFe Agile environments.</p>
+      <p>8+ years in enterprise software engineering across wealth management, financial services, brokerage and global trade. Product ownership complements hands-on development, technical design, testing and production delivery.</p>
       <h2>Core skills</h2>
-      <div class="tag-cloud compact">${["Product strategy", "Roadmapping", "Discovery", "Backlog", "Prioritization", "SAFe Agile", "PI planning", "REST APIs", "Microservices", "AI products", "CRM", "Azure", "AWS"].map((x) => `<span>${x}</span>`).join("")}</div>
+      <div class="tag-cloud compact">${["C#", ".NET Core", "ASP.NET Core", "REST APIs", "SQL Server", "EF Core", "Dapper", "Microservices", "Angular", "React", "IBM MQ", "Azure DevOps", "Git", "Product ownership"].map((x) => `<span>${x}</span>`).join("")}</div>
     </aside>
     <div class="resume-main">
       <h2>Experience</h2>
-      <article><h3>Intelliflo</h3><p class="muted">Senior Product Owner - Oct 2021 to Present</p><p>Led product delivery across AI-powered advisor capabilities, Outlook Integration, Money Alive Integration, Client Review workflows, CRM, financial planning, reporting, and enterprise integrations.</p></article>
+      <article><h3>Intelliflo</h3><p class="muted">Senior Product Owner - Oct 2021 to Present</p><p>Develop C#/.NET applications, ASP.NET Core services, REST APIs and SQL data-processing logic for Intelliflo IQ, Outlook and Money Alive integrations, Client Review, CRM, financial planning and reporting. Implement business rules, mapping, validation and error handling; support testing and releases alongside backlog and UAT responsibilities.</p></article>
       <article><h3>Broadridge Financial Solutions</h3><p class="muted">Senior Software Engineer - Apr 2020 to Oct 2021</p><p>Delivered ACATS account transfer capabilities and secure IBM MQ-based integration patterns for regulated financial applications.</p></article>
       <article><h3>GTKonnect, acquired by EY</h3><p class="muted">Associate Software Developer - Apr 2018 to Apr 2020</p><p>Built Global Trade Management capabilities, CBP/ABI integrations, ISF and FTZ processing services, REST APIs, and microservices.</p></article>
-      <h2>Selected product outcomes</h2>
-      <p>Intelliflo IQ automated 190+ platform fields and reduced advisor administrative effort from hours to minutes. Money Alive supported a 20% increase in active client engagement metrics for pilot advisory firms. Improved story quality and Definition of Done practices supported a 40% reduction in post-release defects and rework loops.</p>
+      <h2>Selected engineering work</h2>
+      <p>Intelliflo IQ workflow functionality supporting automated population of 190+ platform fields; Outlook and Money Alive backend API integrations; Client Review business rules and data processing; ACATS financial messaging with IBM MQ; ASP.NET/C# global trade and paperless entry applications.</p>
     </div>
   </section>`;
   return pageShell({
     file: "resume/index.html",
     title: `Resume | ${author}`,
-    description: "Resume showcase for Venkata Prasad Muraharisetty, Senior Product Owner and AI-focused Technical Product Manager in enterprise SaaS and wealth management.",
+    description: "Technical resume for Venkata Prasad Muraharisetty: C#/.NET application development, ASP.NET Core, REST APIs, SQL Server, enterprise integrations and additional product ownership.",
     body,
     canonical: absolute("resume/"),
     jsonLd: [personSchema, breadcrumbSchema([{ name: "Home", url: siteUrl }, { name: "Resume", url: absolute("resume/") }])]
@@ -1009,23 +1030,23 @@ function jiraResumePage() {
       column: "Backlog",
       type: "Epic",
       category: "strategy",
-      title: "AI product leadership for enterprise wealth platforms",
+      title: "Implement Intelliflo IQ backend adviser workflows",
       points: 13,
       priority: "Highest",
-      summary: "Define and deliver AI-assisted advisor workflows that save time while preserving enterprise trust.",
-      criteria: ["MVP scope connects to measurable advisor productivity", "Governance, telemetry, and quality gates are part of the release plan", "Business, engineering, and UX understand the trade-offs"],
-      evidence: "Intelliflo IQ automated data population across 190+ platform fields and reduced advisor administration from hours to minutes."
+      summary: "Develop C#/.NET backend functionality, data mapping and validation for AI-enabled adviser experiences.",
+      criteria: ["Mapped data supports the target platform fields", "Business rules and required-field validation are applied", "Integration scenarios are verified with QA"],
+      evidence: "Intelliflo IQ workflows supporting automated population of 190+ platform fields."
     },
     {
       key: "VP-124",
       column: "Backlog",
       type: "Story",
       category: "strategy",
-      title: "As an executive stakeholder, I need a roadmap that explains outcomes",
+      title: "Build backend business rules for adviser applications",
       points: 8,
       priority: "High",
-      summary: "Roadmap decisions are framed around customer value, business impact, technical risk, and release sequencing.",
-      criteria: ["Epics map to outcomes, not just features", "Dependencies and risks are visible before sprint commitment", "Stakeholders know what changed and why"],
+      summary: "Implement application behavior, data processing and workflow validation across enterprise wealth-management software.",
+      criteria: ["Functional requirements translate into application behavior", "Client data is validated before processing", "QA can verify expected behavior and error paths"],
       evidence: "Delivered across CRM, financial planning, reporting, client review, and advisor productivity initiatives."
     },
     {
@@ -1045,10 +1066,10 @@ function jiraResumePage() {
       column: "Ready for Sprint",
       type: "Task",
       category: "technical",
-      title: "Map API, microservice, and integration trade-offs before build",
+      title: "Develop REST APIs and third-party integration logic",
       points: 5,
       priority: "Medium",
-      summary: "Use engineering background to identify service boundaries, data contracts, authentication, monitoring, and fallback behavior early.",
+      summary: "Implement backend API contracts, data mapping, validation and error handling for connected application workflows.",
       criteria: ["API behavior and error paths are clear", "Integration dependencies have owners", "Observability and support needs are known before launch"],
       evidence: "Hands-on background across REST APIs, microservices, IBM MQ integrations, SQL Server, Azure, AWS, and enterprise systems."
     },
@@ -1057,10 +1078,10 @@ function jiraResumePage() {
       column: "In Progress",
       type: "Story",
       category: "wealth",
-      title: "As an advisor, I need client workflows that reduce context switching",
+      title: "Implement Outlook, Money Alive and Client Review workflows",
       points: 8,
       priority: "High",
-      summary: "Design advisor journeys across Outlook, CRM, client reviews, financial planning, reporting, and client engagement.",
+      summary: "Build backend functionality connecting adviser communications, partner capabilities and client-review business rules.",
       criteria: ["Workflow starts from real advisor behavior", "Client context moves between systems with less rekeying", "Auditability and permissions are handled"],
       evidence: "Delivered Outlook Integration, Client Review, CRM enhancements, Financial Planning, Fact Find, Reporting, and Money Alive Integration."
     },
@@ -1069,10 +1090,10 @@ function jiraResumePage() {
       column: "In Progress",
       type: "Spike",
       category: "technical",
-      title: "Investigate regulated SaaS launch readiness",
+      title: "Debug application issues and support production releases",
       points: 3,
       priority: "Medium",
-      summary: "Make releases boring in the best way: tested, observable, communicated, and supportable.",
+      summary: "Investigate defects, validate integrations and work with QA and engineering on reliable application delivery.",
       criteria: ["Release notes explain user impact", "Support and client-facing teams have context", "Metrics exist for adoption, quality, and issues"],
       evidence: "SAFe Agile delivery across PI planning, sprint planning, refinement, reviews, retrospectives, and production releases."
     },
@@ -1081,24 +1102,24 @@ function jiraResumePage() {
       column: "Done",
       type: "Outcome",
       category: "delivery",
-      title: "Ship complex product increments across enterprise SaaS",
+      title: "Develop ACATS financial messaging with IBM MQ",
       points: 13,
       priority: "Done",
-      summary: "Convert ambiguity into shipped capabilities across multi-team, regulated, technically complex environments.",
-      criteria: ["Discovery informs roadmap", "Delivery teams understand value and scope", "Launch outcomes are measurable"],
-      evidence: "8+ years across Intelliflo, Broadridge Financial Solutions, and GTKonnect acquired by EY."
+      summary: "Implement .NET backend services and standardized account-transfer messages for brokerage applications.",
+      criteria: ["Messages include customer positions and transfer information", "Financial message exchange uses IBM MQ", "Transfer data is validated before processing"],
+      evidence: "Broadridge ACATS backend development and asynchronous financial integrations."
     },
     {
       key: "VP-418",
       column: "Done",
       type: "Outcome",
       category: "career",
-      title: "Progress from engineer to Senior Product Owner",
+      title: "Build global trade and paperless entry applications",
       points: 8,
       priority: "Done",
-      summary: "A rare blend of product leadership, platform thinking, architecture fluency, and delivery ownership.",
-      criteria: ["Can speak business value with leaders", "Can speak technical trade-offs with engineers", "Can keep teams moving through ambiguity"],
-      evidence: "Career path: Associate Software Developer, Senior Software Engineer, Product Owner, Senior Product Owner."
+      summary: "Develop ASP.NET/C#, SQL data access, file-processing automation and operational UI workflows.",
+      criteria: ["Required entry fields are validated", "File data creates application records and supports transmission", "Users can monitor and control load processing"],
+      evidence: "GTKonnect application development using C#, ASP.NET, SQL, ADO.NET, React, Angular and FTP/SFTP."
     }
   ];
   const columns = ["Backlog", "Ready for Sprint", "In Progress", "Done"];
@@ -1124,8 +1145,8 @@ function jiraResumePage() {
   </section>`).join("");
   const body = `<section class="page-hero jira-hero">
     <p class="eyebrow">Jira Resume Mode</p>
-    <h1>Venkat's resume, rebuilt as a product delivery board.</h1>
-    <p>Scan my strengths like a Jira project: strategy epics, sprint-ready product ownership, technical stories, wealth management outcomes, and shipped evidence.</p>
+    <h1>Engineering delivery board</h1>
+    <p>C#/.NET application development, API integrations, financial messaging and production delivery, with product ownership alongside.</p>
     <div class="hero-actions">
       <a class="button primary" href="../index.html">Switch to cinematic portfolio</a>
       <a class="button secondary" href="../resume/">Classic resume page</a>
@@ -1137,8 +1158,8 @@ function jiraResumePage() {
     <div class="jira-summary reveal">
       <div><span>Candidate</span><strong>Senior Product Owner</strong></div>
       <div><span>Domain</span><strong>Enterprise SaaS + WealthTech</strong></div>
-      <div><span>Delivery</span><strong>SAFe Agile + AI Products</strong></div>
-      <div><span>Signal</span><strong>Engineer to Product Leader</strong></div>
+      <div><span>Primary responsibility</span><strong>Hands-on development</strong></div>
+      <div><span>Stack</span><strong>C# / .NET / SQL / APIs</strong></div>
     </div>
     <div class="jira-controls reveal">
       <div class="jira-filter-group" role="group" aria-label="Filter Jira resume stories">
@@ -1166,15 +1187,15 @@ function jiraResumePage() {
       <a class="button primary" href="mailto:${email}">Start conversation</a>
     </div>
     <div class="retro-grid">
-      <article class="content-card reveal"><h3>What went well</h3><p>Product strategy is backed by delivery discipline, technical fluency, and shipped outcomes in regulated enterprise SaaS.</p></article>
-      <article class="content-card reveal"><h3>Risks reduced</h3><p>Engineering background helps uncover integration, API, cloud, observability, and data-quality concerns before they become sprint surprises.</p></article>
-      <article class="content-card reveal"><h3>Next sprint</h3><p>Best-fit roles: Senior Product Owner, Technical Product Manager, AI Product Manager, Enterprise SaaS Product Owner, or WealthTech Product Lead.</p></article>
+      <article class="content-card reveal"><h3>Application engineering</h3><p>Hands-on implementation across C#/.NET applications, backend APIs, data access and enterprise integrations.</p></article>
+      <article class="content-card reveal"><h3>Delivery ownership</h3><p>Technical design, integration validation, defect resolution and production support, alongside backlog and UAT responsibilities.</p></article>
+      <article class="content-card reveal"><h3>Next role</h3><p>Senior .NET Developer, Senior Software Engineer, backend development or technical product ownership with a hands-on engineering focus.</p></article>
     </div>
   </section>`;
   return pageShell({
     file: "jira-resume/index.html",
     title: `Jira Resume | ${author}`,
-    description: "A Jira-board version of Venkata Prasad Muraharisetty's resume, highlighting product strategy, AI products, enterprise SaaS, wealth management, technical product management, and delivery outcomes.",
+    description: "Engineering delivery board for Venkata Prasad Muraharisetty: C#/.NET applications, API integrations, SQL, IBM MQ and additional product ownership responsibilities.",
     body,
     canonical: absolute("jira-resume/"),
     jsonLd: [personSchema, breadcrumbSchema([{ name: "Home", url: siteUrl }, { name: "Jira Resume", url: absolute("jira-resume/") }])]
@@ -1190,8 +1211,9 @@ document.querySelector("[data-theme-toggle]")?.addEventListener("click",()=>{con
 const nav=document.querySelector("[data-nav]");
 document.querySelector("[data-nav-toggle]")?.addEventListener("click",(event)=>{const open=nav.classList.toggle("is-open");event.currentTarget.setAttribute("aria-expanded",String(open))});
 nav?.addEventListener("click",(event)=>{if(event.target.matches("a")){nav.classList.remove("is-open");document.querySelector("[data-nav-toggle]")?.setAttribute("aria-expanded","false")}});
+nav?.addEventListener("click",(event)=>{if(event.target.closest("a")){nav.classList.remove("is-open");document.querySelector("[data-nav-toggle]")?.setAttribute("aria-expanded","false")}});
 document.addEventListener("click",(event)=>{const link=event.target.closest?.("a[href]");if(!link||location.protocol!=="file:")return;const target=new URL(link.getAttribute("href"),location.href);if(target.protocol==="file:"&&target.pathname===location.pathname&&target.hash){event.preventDefault();document.querySelector(target.hash)?.scrollIntoView({behavior:"smooth",block:"start"});}});
-const aiCopy={advisor:"Advisor value: AI assistance reduces repetitive data entry and turns advisor effort toward client conversations, review prep, and advice quality.",enterprise:"Enterprise trust: AI capability is framed around permissions, data governance, measurable adoption, telemetry, and release confidence.",delivery:"Delivery model: MVP scope, epics, user stories, acceptance criteria, DoD discipline, and SAFe ceremonies connect strategy to working software."};
+const aiCopy={advisor:"Application functionality: backend workflows, data mapping and validation support automated population of 190+ platform fields.",enterprise:"Integration engineering: C#/.NET services connect adviser experiences with platform data and validated application workflows.",delivery:"Delivery ownership: implementation, integration testing, defect resolution and release support, alongside user stories and acceptance criteria."};
 const aiOutput=document.querySelector("[data-ai-output]");
 document.querySelectorAll("[data-ai-persona]").forEach((button)=>button.addEventListener("click",()=>{document.querySelectorAll("[data-ai-persona]").forEach((item)=>item.classList.remove("is-active"));button.classList.add("is-active");if(aiOutput){aiOutput.textContent=aiCopy[button.dataset.aiPersona]}}));
 const loader=document.querySelector("[data-jarvis-loader]");
@@ -1202,7 +1224,7 @@ const missionPopup=document.querySelector("[data-mission-popup]");
 function closeLoader(showMission=true){if(loader){loader.classList.add("is-hidden");setTimeout(()=>{loader.hidden=true},500)}sessionStorage.setItem("jarvis_intro_seen","1");if(showMission){setTimeout(()=>{if(missionPopup&&!sessionStorage.getItem("mission_popup_seen"))missionPopup.hidden=false},650)}}
 function hideLoader(){closeLoader(true)}
 addEventListener("pageshow",(event)=>{if(event.persisted||sessionStorage.getItem("jarvis_intro_seen")){if(loader){loader.classList.add("is-hidden");loader.hidden=true}}});
-if(loader&&sessionStorage.getItem("jarvis_intro_seen")){loader.hidden=true}else if(loader){const lines=["Epic created","Stories created","Sprint planning aligned","Acceptance criteria locked","Deployed to production"];let step=0;const tick=()=>{if(step<lines.length){if(loaderLine)loaderLine.textContent=lines[step]+"...";if(loaderBar)loaderBar.style.width=((step+1)/lines.length*100)+"%";loaderStages.forEach((item,index)=>{item.classList.toggle("is-active",index===step);item.classList.toggle("is-done",index<step)});step+=1;setTimeout(tick,520)}else{if(loaderLine)loaderLine.textContent="100% complete. Portfolio deployed.";loaderStages.forEach((item)=>item.classList.add("is-done"));setTimeout(hideLoader,650)}};setTimeout(tick,350)}
+if(loader)loader.hidden=true;
 document.querySelector("[data-loader-skip]")?.addEventListener("click",hideLoader);
 document.querySelector("[data-mission-close]")?.addEventListener("click",()=>{sessionStorage.setItem("mission_popup_seen","1");if(missionPopup)missionPopup.hidden=true});
 document.querySelector("[data-mission-start]")?.addEventListener("click",(event)=>{sessionStorage.setItem("mission_popup_seen","1");if(missionPopup)missionPopup.hidden=true;const game=document.querySelector("#planning-game");if(game){game.scrollIntoView({behavior:"smooth",block:"start"});if(location.protocol!=="file:")history.replaceState(null,"","#planning-game");return}const url=event.currentTarget?.dataset.homeUrl;if(url&&location.protocol!=="file:")location.assign(url)});
@@ -1267,12 +1289,12 @@ function closeTerminal(){if(terminal)terminal.hidden=true}
 document.querySelector("[data-terminal-open]")?.addEventListener("click",openTerminal);
 document.querySelector("[data-terminal-close]")?.addEventListener("click",closeTerminal);
 addEventListener("keydown",(event)=>{if(event.key==="~"){event.preventDefault();openTerminal()}if(event.key==="Escape")closeTerminal()});
-terminalInput?.addEventListener("keydown",(event)=>{if(event.key!=="Enter")return;const command=terminalInput.value.trim().toLowerCase();terminalInput.value="";const lines={help:"Commands: whoami, skills, projects, contact, sudo hire-me, clear, exit",whoami:"Venkata Prasad Muraharisetty - Senior Product Owner for AI-centric Enterprise SaaS and WealthTech.",skills:"Product strategy, SAFe Agile, AI products, REST APIs, microservices, CRM, Azure, AWS, Splunk.",projects:"Intelliflo IQ, Outlook Integration, Money Alive, Client Review, Financial Planning, CRM, ACATS, Global Trade.",contact:"Email: ${email}",["sudo hire-me"]:"Candidate Loaded. Opening email channel..."};if(command==="clear"){terminalOutput.textContent="";return}if(command==="exit"){closeTerminal();return}terminalOutput.textContent+="\\n> "+command+"\\n"+(lines[command]||"Unknown command. Type help.")+"\\n";if(command==="sudo hire-me"){location.href="mailto:${email}?subject=Product%20Role%20Conversation"}});
+terminalInput?.addEventListener("keydown",(event)=>{if(event.key!=="Enter")return;const command=terminalInput.value.trim().toLowerCase();terminalInput.value="";const lines={help:"Commands: whoami, skills, projects, contact, sudo hire-me, clear, exit",whoami:"Venkata Prasad Muraharisetty - hands-on C#/.NET developer and Senior Product Owner at intelliflo.",skills:"C#, .NET Core, ASP.NET Core, REST APIs, SQL Server, EF Core, Dapper, Angular, React, IBM MQ, Azure DevOps and Git.",projects:"Intelliflo IQ, Outlook Integration, Money Alive, Client Review, Financial Planning, CRM, ACATS, Global Trade.",contact:"Email: ${email}",["sudo hire-me"]:"Candidate Loaded. Opening email channel..."};if(command==="clear"){terminalOutput.textContent="";return}if(command==="exit"){closeTerminal();return}terminalOutput.textContent+="\\n> "+command+"\\n"+(lines[command]||"Unknown command. Type help.")+"\\n";if(command==="sudo hire-me"){location.href="mailto:${email}?subject=DotNet%20Development%20Conversation"}});
 const chat=document.querySelector("[data-chat]"),chatLog=document.querySelector("[data-chat-log]"),chatInput=document.querySelector("[data-chat-input]");
 function openChat(){if(chat){chat.hidden=false;chatInput?.focus();award("AI_WHISPERER",20)}}
 function closeChat(){if(chat)chat.hidden=true}
-function jarvisAnswer(text){const q=text.toLowerCase();if(q.includes("iq")||q.includes("ai"))return"Intelliflo IQ is the strongest AI signal: Venkat led delivery of AI-powered Engagement and Advice Assistants that automated 190+ fields and reduced advisor admin from hours to minutes.";if(q.includes("hire")||q.includes("why"))return"Hire Venkat if you need a Senior Product Owner who can translate strategy into shippable SaaS outcomes, speak architecture with engineering, and keep enterprise stakeholders aligned.";if(q.includes("api")||q.includes("architecture"))return"Architecture signal: REST APIs, microservices, IBM MQ, Azure/AWS, SQL Server, .NET, integrations, observability, and enough engineering depth to reduce delivery risk early.";if(q.includes("safe")||q.includes("agile")||q.includes("planning"))return"SAFe signal: PI planning, sprint planning, backlog refinement, epics, user stories, acceptance criteria, release planning, and Definition of Done discipline.";return"JARVIS summary: Venkat is an AI-fluent Senior Product Owner for enterprise SaaS and WealthTech, with engineering depth, measurable product outcomes, and strong delivery discipline."}
-function addChatLine(who,text){if(chatLog){const p=document.createElement("p");p.innerHTML="<strong>"+who+":</strong> "+text;chatLog.appendChild(p);chatLog.scrollTop=chatLog.scrollHeight}}
+function jarvisAnswer(text){const q=text.toLowerCase();if(q.includes("iq"))return"Venkat developed Intelliflo IQ backend workflow functionality, data mapping and validation supporting automated population of 190+ platform fields.";if(q.includes("hire")||q.includes("why"))return"Venkat brings 8+ years of enterprise software experience and hands-on C#/.NET development across applications, REST APIs, SQL data access and third-party integrations. His current title is Senior Product Owner; development is his primary responsibility.";if(q.includes("api")||q.includes("architecture")||q.includes("net")||q.includes("skill"))return"Development toolkit: C#, .NET/.NET Core, ASP.NET Core/MVC, REST APIs, SQL Server, EF Core, ADO.NET, Dapper, Angular, React, IBM MQ, Git and Azure DevOps. Projects include Outlook and Money Alive integrations, Client Review and ACATS.";if(q.includes("safe")||q.includes("agile")||q.includes("planning")||q.includes("owner"))return"Alongside development, Venkat owns backlog priorities, user stories, acceptance criteria, sprint planning and UAT. Product ownership complements his engineering work.";return"Venkat is a hands-on .NET developer and Senior Product Owner at intelliflo. His primary focus is application development, API integrations, backend business rules, testing and production delivery."}
+function addChatLine(who,text){if(chatLog){const p=document.createElement("p"),label=document.createElement("strong");label.textContent=who+":";p.append(label,document.createTextNode(" "+text));chatLog.appendChild(p);chatLog.scrollTop=chatLog.scrollHeight}}
 document.querySelector("[data-chat-open]")?.addEventListener("click",openChat);
 document.querySelector("[data-chat-close]")?.addEventListener("click",closeChat);
 document.querySelectorAll("[data-chat-prompt]").forEach((button)=>button.addEventListener("click",()=>{const prompt=button.textContent.trim();addChatLine("You",prompt);addChatLine("JARVIS",jarvisAnswer(button.dataset.chatPrompt+" "+prompt));openChat()}));
@@ -1284,7 +1306,7 @@ function applyJiraFilters(){const query=(jiraSearch?.value||"").trim().toLowerCa
 document.querySelectorAll("[data-jira-filter]").forEach((button)=>button.addEventListener("click",()=>{jiraFilter=button.dataset.jiraFilter;document.querySelectorAll("[data-jira-filter]").forEach((item)=>item.classList.toggle("is-active",item===button));applyJiraFilters();award("SECTION_SCANNER",5)}));
 jiraSearch?.addEventListener("input",applyJiraFilters);
 console.log("Hello recruiter. You found developer mode. Try hire()");
-globalThis.hire=()=>("Candidate Loaded: Senior Product Owner | AI Products | Enterprise SaaS | Wealth Management");
+globalThis.hire=()=>("Candidate Loaded: C# / .NET Development | Senior Product Owner | APIs | Enterprise Applications");
 const seenSections=new Set();
 const observer=new IntersectionObserver((entries)=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add("is-visible");const section=entry.target.closest("section")?.id;if(section&&!seenSections.has(section)){seenSections.add(section);award("SECTION_SCANNER",15)}observer.unobserve(entry.target)}}},{threshold:.1});
 document.querySelectorAll(".reveal").forEach((el)=>observer.observe(el));
