@@ -754,12 +754,12 @@ Sitemap: ${siteUrl}/sitemap.xml`;
 function readme() {
   return `# Venkata Prasad Muraharisetty Portfolio
 
-Static GitHub Pages portfolio for a Senior Product Owner / Technical Product Manager focused on enterprise SaaS, wealth management, AI products, integrations, and technical product leadership.
+Static GitHub Pages portfolio for a hands-on C#/.NET developer with additional product ownership responsibilities. Current role: Senior Product Owner. Focus: enterprise applications, ASP.NET Core, REST APIs, SQL Server and integrations.
 
 ## Structure
 
 - \`index.html\` - premium portfolio homepage
-- \`projects/\` - product delivery case studies
+- \`projects/\` - engineering implementation case studies
 - \`blog/\` - 45 technical blog posts plus index
 - \`jira-resume/\` - interactive Jira-board resume mode
 - \`assets/resume/\` - published PDF resume
@@ -767,7 +767,11 @@ Static GitHub Pages portfolio for a Senior Product Owner / Technical Product Man
 - \`assets/css/style.css\` and \`assets/js/main.js\` - lightweight frontend
 - \`sitemap.xml\`, \`robots.txt\`, \`rss.xml\` - SEO assets
 
-Run \`node scripts/generate-site.js\` to regenerate the static pages from structured content.`;
+Run \`node scripts/generate-site.js\` to regenerate the static pages from structured content.
+
+Validate with \`node scripts/check-site.js\` and \`node scripts/check-technical-profile.js\`.
+Preview locally with \`node scripts/serve-static.js\` (default port 4173).
+Pushes to main deploy through the existing GitHub Pages workflow.`;
 }
 
 function homePage() {
@@ -777,7 +781,8 @@ function homePage() {
     <p>${p.problem}</p>
     <a class="text-link" href="projects/${p.slug}/">Read case study</a>
   </article>`).join("");
-  const blogCards = posts.slice(0, 6).map((p) => postCard(p, "")).join("");
+  const featuredPosts = ["api-design-for-product-managers", "rest-api-versioning-strategy", "event-driven-architecture-for-product-leaders", "cqrs-for-product-managers", "domain-driven-design-for-saas-products", "observability-as-a-product-capability"];
+  const blogCards = featuredPosts.map((slug) => postCard(postBySlug.get(slug), "")).join("");
   const body = `
   <section class="hero">
     <canvas class="neural-canvas" data-neural-canvas aria-hidden="true"></canvas>
